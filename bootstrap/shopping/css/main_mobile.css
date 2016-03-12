@@ -1,0 +1,133 @@
+
+.banner{
+    text-align: center;
+    padding:1.041667rem 0 1.625rem;
+}
+.banner h1{
+    font-size: 1.458333rem;
+    line-height: 1.666667rem; 
+    margin-bottom: 0.791667rem;
+    color:#303030;  
+}
+.banner p{
+    font-size: 0.5rem;
+    line-height: 0.729167rem;
+    font-family: 'Georgia';
+    font-style: italic;
+    color:#606060;
+}  
+/* gallery*/         
+.gallery{
+    color:#fff;
+    letter-spacing: 0.05em;
+    line-height: 0.541667rem;
+}
+.gallery p{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 0.458333rem;
+    text-transform: uppercase;
+}  
+.gallery h1{
+    font-weight: bold;
+    font-family: 'Lato-Bold';
+}   
+.one-line>a{
+    display:flex;
+    width:100%;
+    height:100%;
+    color:#fff;
+    flex-direction: column;
+    justify-content: center;
+}
+/*一行模块*/
+.one-line>a:hover,.two-line>a:hover,.one-line>a:focus,.two-line>a:focus,.one-line>a:visited,.two-line>a:visited{
+    text-decoration: none;
+}
+/*箭头模块*/
+.l-arrow{
+    background-color: #606060;
+}
+.l-arrow{
+    height:4.166667rem;
+}
+.l-arrow h1{
+    font-size: 0.5rem;
+    line-height: 0.5625rem;
+    margin-bottom: 0.104167rem;
+}
+.l-arrow p{
+    line-height: 0.479167rem;
+}
+/*箭头图标*/
+.arrow-icon{
+    line-height: 0.666667rem;
+    font-size: 0.666667rem;
+    margin-bottom: 0.208333rem;
+}
+.arrow-icon span{
+    width:0.666667rem;
+    height:0.666667rem;
+    display:inline-block;
+    vertical-align: bottom;
+    background-repeat: no-repeat;
+    background-image: url(../images/aarow-up.png);
+}
+/*品牌系列*/
+.series{
+    height:6.041667rem;
+    background-color: #cacaca;
+}
+.series h1{
+    font-size: 0.708333rem;
+    line-height: 0.854167rem;
+}
+/*空模块*/
+.em-mo{
+    background-color: #c2c2c2;
+    height:4.166667rem;
+}
+/*订阅模块*/
+.subscription{
+    letter-spacing: 0.05em;
+    font-size: 0px;
+    color:#606060;
+    padding:1.541667rem 0 1.666667rem;
+}
+.subscription h1{
+    margin: 0 auto 0.479167rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    color:#303030;
+    font-family: 'Lato-Bold';
+}
+.subscription p{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 0.375rem;
+    line-height: 0.458333rem;
+    margin-bottom: 1.166667rem;
+} 
+.subscription input{
+    outline:none;
+    font-size: 0.416667rem;
+    line-height: 0.5rem;
+    vertical-align: bottom;
+    height:1.25rem;
+}
+.subscription input[type="text"]{
+    padding:0.375rem 0.229167rem;
+    font-style: italic;
+    border:2px solid #959595;
+    border-right: none;
+    width:75%;
+}
+.subscription input[type="submit"]{
+    padding:0.416667rem 0px;
+    color:#fff;
+    background-color: #f68236;
+    border:none;
+    width:25%;
+}
+

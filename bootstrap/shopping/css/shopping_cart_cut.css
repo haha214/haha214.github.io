@@ -1,0 +1,156 @@
+/*购物车页面*/
+.shopping-cart{
+    padding:100px 0 0;
+}
+/*购物车标题*/
+.sc-h{
+    margin: 0 0 95px;
+}
+.sc-h h1{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color: #303030;
+}
+.sc-h p{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 18px;
+    line-height: 36px;
+    color:#606060;
+}
+
+/*购物车选项*/
+.sc-items{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #909090;
+    /*display:flex;
+    justify-content: space-between;*/
+}
+.sc-items h5{
+    font-size: 12px;
+    line-height: 14px;
+    color:#909090;
+    text-transform: uppercase;
+}
+/*购物车物品*/
+.sc-cons{
+    margin-bottom: 10px;
+}
+/*购物车单条商品*/
+.sc-con{
+    border-bottom: 1px solid #909090;
+    padding: 17px 0;
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+/*商品照片*/
+.sc-pic img{
+
+}
+/*商品描述*/
+.sc-des,.sc-col,.sc-size,.sc-qty,.sc-am{
+    line-height: 18px;
+    font-size: 14px;
+    color:#303030;
+}
+.sc-des,.sc-col,.sc-size,.sc-pic{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sc-des h4{
+    font-size: 14px;
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+}
+.sc-des h4 a{
+    color:#303030;
+}
+.sc-des p{
+    font-size: 12px;
+    font-style: italic;
+}
+.sc-des p a{
+    color:#606060;
+}
+/*商品数量*/
+.sc-qty{
+    display:flex;
+    align-items: center;
+}
+.sc-qty p{
+    margin-right: 5px;
+}
+/*数量按钮*/
+.sc-qbtn{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-add,.btn-de{
+    width:11px;
+    height:11px;
+    border:none;
+}
+/*数量加*/
+.btn-add{
+    margin-bottom: 2px;
+    background-image: url(../images/scq-btn_06.png);
+}
+/*数量减*/
+.btn-de{
+    background-image: url(../images/scq-btn_09.png);
+}
+/*商品总计*/
+.sc-am{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+/*商品总计按钮*/
+.sc-am button{
+    padding:0;
+    border:none;
+    background-color:#fff;
+    font-size: 30px;
+    font-family: 'Lato-Light';
+    margin-left: 10px;
+}
+.sc-am button span{
+    transform:rotate(45deg);
+    display:inline-block;
+}
+/*购物车总价*/
+.sc-total{
+    padding:21px 15px 30px;
+    display:flex;
+    justify-content: flex-end;
+    /*margin-bottom: 44px;*/
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color:#303030;
+    background-color: #f9f9f9;
+}
+.sc-total p:last-child{
+    margin: 0px 27px;
+    color:#f68236;
+}
+/*购物车底部*/
+.sc-footer{
+    display:flex;
+    justify-content: space-between;
+    padding:44px 0 73px;
+}
+.sc-footer p{
+    font-size: 14px;
+    line-height: 18px;
+}
+.sc-footer p a{
+    color:#303030;
+    text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+
+/*手机端下拉条*/
+.sf-toggle{
+    padding:0.416667rem 0.458333rem;
+    font-style: italic;
+    color:#606060;
+    border:1px solid #c2c2c2;
+    text-align: left;
+    margin:0.416667rem 0px 1.25rem;
+    line-height: 0.416667rem;
+    font-size: 0.416667rem;
+}
+.sf-toggle button{
+    background-position:center center ;
+    background-repeat: no-repeat;
+    float:right;
+    height:0.416667rem;
+    width:13px;
+    outline:none;
+    background-color: #fff;
+    border:none;
+}
+/*按钮图标*/
+.btn-up{
+    background-image: url(../images/sale-item-up.png);
+}
+.btn-dn{
+    background-image: url(../images/sale-item-un.png);
+}
+
+/*加载更多*/
+.load-more{
+    padding:1.25rem 0 0.833333rem;
+}
+.load-more button{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 0.333333rem;
+    line-height: 0.416667rem;
+    padding:0.416667rem 0;
+    width:100%;
+    background-color:#303030;
+    color:#fff;
+    outline:none;
+    border:none;
+}
+
+

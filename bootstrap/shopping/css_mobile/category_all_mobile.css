@@ -1,0 +1,36 @@
+
+/*商品展示*/
+.sales-show{
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+/*具体商品每一列*/
+.sale-cols:nth-child(odd) .sale-col{
+    float:left;
+}
+.sale-cols:nth-child(even) .sale-col{
+    float:right;
+}
+.sale-col{
+   padding-bottom: 0.5rem;
+}
+.sale-col>a{
+    display:inline-block;
+    margin-bottom: 0.5rem; 
+}
+.sale-col img{
+    width:4.166667rem;
+    height:5.75rem;
+}
+.sale-col h4{
+    font-size: 0.291667rem;
+    line-height: 0.5rem;
+}
+.sale-col h4 a{
+    color:#303030;
+}
+.sale-col h4:nth-child(2){
+    font-weight: bold;
+    font-family: 'Lato-Bold';
+}
+

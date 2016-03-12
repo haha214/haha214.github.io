@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: 'Lato-Light';
+    src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+body{
+    font-family: 'Lato-Regular';
+    background-color: #e5e5e5;
+    color:#606060;
+}
+.container{
+    background-color: #fff;
+}
+h1,h2,h3{
+    text-transform: uppercase;
+    margin:0;
+}
+h4,h5,p{
+    margin:0;
+}
+ul{
+    padding:0;
+    list-style: none;
+    margin: 0;
+}
+.shopping-container{
+width:100%;
+}
+.shopping-container:before{
+    content: " ";
+    display: table;
+}
+.shopping-container:after{
+    content: " ";
+    display: table;
+    clear:both;
+}
+/*全局导航*/
+.shopping-navbar{
+    padding:20px 0px;
+    border-bottom: 1px solid #e5e5e5;              
+}
+.icon-bgimg{
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.shopping-navbar .navbar{
+    margin-bottom: 0;
+    border:none;
+}
+.shopping-navbar .navbar-nav>li>a{
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 43px;
+    font-size: 14px;
+    color:#303030;
+}
+/*折叠按钮*/
+.shopping-navbar .navbar-toggle{
+    padding:18px 14px;
+    background-color: #8d8d8d;
+    margin:0;
+    border:none;
+    border-radius: 0;
+}
+.shopping-navbar .navbar-toggle .icon-bar{
+    background-color: #fff;
+    width:32px;
+    height:4px;
+}
+.shopping-navbar .navbar-toggle .icon-bar+.icon-bar{
+    margin-top: 6px;
+}
+/*导航商标*/
+.shopping-navbar .navbar-brand{
+    background-color: #222222;
+    color:#fff;
+    font-size: 25.89px;
+    line-height: 22px;
+    padding-top:19px;
+    padding-bottom: 19px;
+    height:auto;
+}
+/*移动端导航购物袋*/
+.navbar-cart{
+    display:block;
+    float:right;
+    margin-right: 25px;
+    width:60px;
+    height:60px;
+    background-image: url(../images/home_res_03.png);
+}
+/*导航用户信息选项*/
+.shopping-navbar .user>li>a span{
+    width:36px;
+    height:43px;
+    display:inline-block;
+    vertical-align: bottom;
+}
+/*登录*/
+.shopping-navbar .user>li:nth-child(1)>a span{
+    background-image: url(../images/01main_03.png);
+}
+/*购物袋*/
+.shopping-navbar .user>li:nth-child(2)>a span{
+    background-image: url(../images/01main_05.png);
+}
+/*搜索*/
+.shopping-navbar .user .dropdown>a,.shopping-navbar .user .search button{
+    width:40px;
+    height:43px;
+    margin-left: 15px;
+    background-image: url(../images/01main_08.png);
+    border:1px solid #959595;
+    background-color: #fff;
+}
+.shopping-navbar .user .search input{
+    width:auto;
+    display:inline-block;
+}
+.shopping-navbar .user .search button{
+    vertical-align:middle;
+    background-color: #fff;
+} 
+.shopping-navbar .user .dropdown-menu{
+    padding:16px 0 16px 9px;
+}
+
+@media (min-width: 768px){
+    .shopping-navbar{
+        padding:36px 0px;
+    }
+    .shopping-navbar .navbar-brand{
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 43px;
+        font-size: 14px;
+    }
+    .navbar-cart{
+        display:none;
+    }
+}
+/*展示窗*/
+.shopping-show{
+    position: relative;
+    background-color: #bbbbbb;
+    height:5.0rem;
+    margin-bottom:1.666667rem;
+}
+/*页脚*/
+.shopping-footer{
+    letter-spacing: 0.05em;
+    padding:1.354167rem 0px 1.25rem;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+.shopping-footer h3{
+    font-weight: bold;
+    font-size: 0.625rem;
+    line-height: 0.729167rem;
+    margin: 0 0 0.791667rem;
+}
+.shopping-footer p{
+    font-size: 0.375rem;
+    line-height: 0.625rem;
+}
+.social-icon{
+    padding-top: 1.041667rem;
+}
+.social-icon li{
+    margin-right: 0.291667rem;
+    display:inline-block;
+    border:1px solid #606060;
+}
+.social-icon li:last-child{
+    margin-right: 0;
+}
+.social-icon a{
+    display:inline-block;
+    padding:0.15625rem 0;
+    line-height: 0.3125rem;
+}
+.social-icon a:hover{
+    text-decoration: none;
+}
+.social-icon a img{
+    vertical-align: bottom;
+    width:0.625rem;
+    height:0.3125rem;
+}
+/*主内容*/
+.content{
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+/*主内容导航*/
+.content-nav{
+    padding:0.833333rem 0px 0.770833rem;
+    font-size: 0.333333rem;
+    line-height: 0.895833rem;
+    text-transform: uppercase;
+    color:#606060;
+
+}
+.content-nav a{
+    color:#606060;
+}
+/*栏目标题*/
+.cate-title{
+    margin-bottom: 0.645833rem;
+    line-height: 0.75rem;
+}
+.cate-title h1{
+    font-size: 0.75rem;
+    color:#303030;
+    font-weight: bold;
+    font-family: 'Lato-Bold';
+    line-height: 0.75rem;
+}
+.font-lighter{
+    font-weight: lighter;
+    font-family: 'Lato-Light';
+}
+.cate-title small{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 0.375rem;
+    color:#606060;
+}
+.cate-title small a{
+    color:#606060;
+    text-decoration: underline;
+}
+/*橙色提交按钮*/
+.sub-btn{
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+    border:none;
+    outline:none;
+    background-color: #f68236;
+    width:100%;
+    font-size: 0.416667rem;
+    line-height: 0.5rem;
+    padding: 0.520833rem 0 0.458333rem;
+}

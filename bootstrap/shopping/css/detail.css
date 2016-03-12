@@ -1,0 +1,63 @@
+/*细节展示*/
+.detail-show{
+    margin-bottom: 60px;
+}
+/*商品细节信息*/
+.detail-info{
+    margin-bottom: 75px;
+}
+/*商品名称*/
+.detail-info h3{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color:#303030;
+}
+.detail-info p{
+    font-size: 14px;
+    line-height: 24px;
+    color:#606060;
+}
+/*art-num*/
+.detail-num{
+    font-style: italic;
+    color:#a3a3a3;
+}
+/*价格*/
+.detail-price{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+/*细节描述*/
+.detail-des{
+    margin-bottom: 30px;
+}
+/*size*/
+.detail-size{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+/*商品尺码*/
+.sale-size{
+    font-size: 0;
+    margin-bottom: 48px;
+}
+.sale-size li{
+    display:inline-block;
+    margin:0px 7px ;
+}
+.sale-size button{
+    color:#464542;
+    padding:7px;
+    background-color: #fff;
+    vertical-align: bottom;
+    font-size: 14px;
+    line-height: 16px;
+    border:1px solid;
+    outline: none;
+}
