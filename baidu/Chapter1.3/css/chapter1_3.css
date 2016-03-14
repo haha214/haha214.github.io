@@ -19,17 +19,23 @@
     background-color: #eee;
     border:1px solid #999;
     padding:20px 160px 20px 240px ;
-
+    min-width: 602px;
+    /*外容器的内容宽度至少能够包含left-c和right-c较大的那个，这里是left-c，即200px,再加上左padding240，右padding160以及2px的边框宽度*/
 }
 .main-c,.left-c,.right-c{
     float:left;
     background-color: #fff;
-    width:100%;
+    /*width:100%;*/
+    /*margin:0 20px;*/
 }
 img{
     width: 80px;
     height: 80px;
     vertical-align: top;
+}
+.main-c{
+    width:100%;
+    /*min-width: 202px;*/
 }
 .left-c{
     width:200px;
