@@ -200,23 +200,34 @@ ul{
     position: relative;
     background-color: #bbbbbb;
     height:118px;
+    font-size: 0;
 }
 .s-btn{
-    position: absolute;
+    /*position: absolute;*/
     background-size: cover;
     background-position: center;
     height:100%;
-    top:0;
+    /*top:0;*/
     width:39px;
     cursor:pointer;
+    border:none;
+    outline:none;
+    background-color: transparent;
 }
 .s-btn:first-child{
     background-image: url(../images/s-btn_03.png);
-    left:0;
+    /*left:0;*/
+    float:left;
 }
 .s-btn:nth-child(2){
     background-image: url(../images/s-btn_05.png);
-    right:0;
+   /* right:0;*/
+   float:right;
+}
+.shopping-show img{
+    width:120px;
+    height:118px;
+    margin:0 20px;
 }
 /*c-look模块*/
 .c-look{
