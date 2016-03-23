@@ -8,9 +8,6 @@
 :before,.:after{
     box-sizing: border-box;
 }
-img{
-    vertical-align: top;
-}
 body,h1,p{
     margin:0;
     padding:0;
@@ -21,13 +18,20 @@ body{
 .container{
     max-width: 750px;
     margin:0 auto;
-    background-color: red;
     color:#fff;
-    
+    background:url(../images/background.png) no-repeat;
+    background-size: 100% 100%;
+}
+[data-dpr="2"] .container{
+    max-width: 1500px;
+}
+[data-dpr="3"] .container{
+    max-width: 2250px;
 }
 .header{
     padding-top: 0.666667rem;
     padding-bottom: 0.8rem;
+    position: relative;
 }
 .logo{
     width:2.12rem;
@@ -36,6 +40,13 @@ body{
     margin:0 0.786667rem 0 0.72rem;
     position: relative;
     top:-0.266667rem;
+}
+.arrow{
+    width:0.813333rem;
+    height:1.146667rem;
+    position: absolute;
+    top:0.266667rem;
+    right:0.373333rem;
 }
 .header h1{
     /*font-size: 35px;*/
@@ -50,21 +61,33 @@ body{
 }
 .content{
     font-size: 22px;
-    /*line-height: 0.52rem;*/
     line-height: 39px;
     padding:0.533333rem 1.573333rem 0.8rem 1.786667rem;
 }
+[data-dpr="2"] .content{
+    font-size: 44px;
+    line-height: 78px;
+}
+[data-dpr="3"] .content{
+    font-size: 66px;
+    line-height: 117px;
+}
 .down{
-    display:block;
-    width:4.426667rem;
+    display:inline-block;
     margin:0 auto;
+    border-radius:90px ;
     border:2px solid #fff;
-    /*font-size: 29px;*/
     font-size: 0.386667rem;
     line-height: 0.493333rem;
     padding:0.346667rem 0.68rem;
     color:#fff;
     text-decoration: none;
+}
+[data-dpr="2"] .down{
+    border-width: 4px;
+}
+[data-dpr="3"] .down{
+    border-width: 6px;
 }
 .down:hover{
     text-decoration: none;
@@ -77,5 +100,9 @@ body{
     background:url(../images/an-icon_03.png) no-repeat;
     background-size: 100% 100%;
     margin-right: 0.44rem;
-    vertical-align: top;
+    vertical-align: middle;
+}
+.down-btn{
+    text-align: center;
+    padding-bottom: 1.066667rem;
 }
