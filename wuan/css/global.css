@@ -92,7 +92,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     position: fixed;
     width:100%;
     top:0;
-    left:5%;
+    /*left:5%;*/
+    left:0;
     height:100%;
     overflow-y: auto;
     background-color: #53aaeb;
@@ -193,9 +194,9 @@ h1,h2,h3,h4,h5,p,ul,li{
     left:5.555556rem;
 }
 
-.sidebar-extend .navbar-collapse{
+/*.sidebar-extend .navbar-collapse{
    left:0;
-}
+}*/
 
 @media (min-width:768px){
     /*导航条头部*/
