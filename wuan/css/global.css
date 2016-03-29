@@ -98,8 +98,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     background-color: #53aaeb;
     color:#fff;
     text-align: center;
-    -webkit-transition:left .3s linear;
-    transition:left .3s linear;
+    -webkit-transition:left .3s ease-in-out;
+    transition:left .3s ease-in-out;
 }
 .navbar-collapse a{
     color:#fff;
