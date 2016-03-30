@@ -94,15 +94,15 @@ h1,h2,h3,h4,h5,p,ul,li{
     position: fixed;
     width:100%;
     top:0;
-    left:0;
+    left:5%;
     height:100%;
     overflow-y: auto;
-    z-index: -1;
+    z-index: 0;
     background-color: #53aaeb;
     color:#fff;
     text-align: center;
-    -webkit-transition:z-index .3s linear;
-    transition:z-index .3s linear;
+    -webkit-transition:left .3s linear;
+    transition:left .3s linear;
 }
 .navbar-collapse a{
     color:#fff;
@@ -110,6 +110,7 @@ h1,h2,h3,h4,h5,p,ul,li{
 .navbar-collapse-content{
     width:5.555556rem;
 }
+
 /*折叠标题*/
 .navbar-title{
     padding:1.462963rem 0 1.555556rem;
@@ -198,9 +199,35 @@ h1,h2,h3,h4,h5,p,ul,li{
     left:5.555556rem;
 }
 .sidebar-extend .navbar-collapse{
-    z-index: auto;
+   left:0;
+   -webkit-animation: slideIn .35s ease-in-out;
+   -moz-animation: slideIn .35s ease-in-out;
+   animation: slideIn .35s ease-in-out;
 }
-
+@-webkit-keyframes slideIn {
+    0%    {left:5%;}
+    100%  {left:0;}
+}
+@-moz-keyframes slideIn {
+    0%    {left:5%;}
+    100%  {left:0;}
+}
+@keyframes slideIn {
+    0%    {left:5%;}
+    100%  {left:0;}
+}
+@-webkit-keyframes slideOut {
+    0%     {left:0;}
+    100%  {left:5%;}
+}
+@-moz-keyframes slideOut {
+    0%     {left:0;}
+    100%  {left:5%;}
+}
+@keyframes slideOut {
+    0%     {left:0;}
+    100%  {left:5%;}
+}
 @media (min-width:768px){
     /*导航条头部*/
     .navbar-header{
