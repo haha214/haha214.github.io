@@ -42,6 +42,7 @@ h1,h2,h3,h4,h5,p,ul,li{
             transition: left .25s linear;
     background-color: #f6fafb;
     min-height: 100%;
+    z-index: auto;
   
 }
 @media (min-width:768px){
@@ -96,7 +97,7 @@ nav{
 /*折叠菜单*/
 .navbar-collapse{
     position: fixed;
-  /*  position: absolute;*/
+  
     width:5.555556rem;
     top:0;
     /*bottom:0;*/
@@ -199,7 +200,7 @@ nav{
 }
 .sidebar-extend .navbar-collapse{
     /*left:0;*/
-    z-index: 1;
+    z-index: auto;
   /*  left:-5.555556rem;*/
 }
 @media (min-width:768px){
