@@ -42,6 +42,7 @@ h1,h2,h3,h4,h5,p,ul,li{
             transition: left .25s linear;
     background-color: #f6fafb;
     min-height: 100%;
+    z-index: 1;
 }
 @media (min-width:768px){
     .all-wrapper{
@@ -198,7 +199,7 @@ nav{
 }
 .sidebar-extend .navbar-collapse{
     /*left:0;*/
-    z-index: 0;
+    z-index: 1;
   /*  left:-5.555556rem;*/
 }
 @media (min-width:768px){
