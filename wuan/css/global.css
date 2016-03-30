@@ -94,7 +94,8 @@ nav{
 }
 /*折叠菜单*/
 .navbar-collapse{
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     width:5.555556rem;
     top:0;
     /*bottom:0;*/
@@ -197,6 +198,7 @@ nav{
 .sidebar-extend .navbar-collapse{
     /*left:0;*/
     z-index: 0;
+    left:-5.555556rem;
 }
 @media (min-width:768px){
     /*导航条头部*/
