@@ -35,13 +35,17 @@ h1,h2,h3,h4,h5,p,ul,li{
 .clearfix:after,.row:after,.container:after,.navbar-header:after,.navbar-collapse:after{
     clear:both;
 }
+body{
+    overflow:hidden;
+}
 .all-wrapper{  
     position: relative;
-   /* left:0; */
+    left:0; 
     -webkit-transition: left .25s linear; 
             transition: left .25s linear;
     background-color: #f6fafb;
     min-height: 100%;
+    /*overflow:hidden;*/
    /* z-index: auto;*/
   
 }
@@ -196,9 +200,9 @@ nav{
 }
 /*折叠状态*/
 .sidebar-extend.all-wrapper{
-  /*  left:5.555556rem;*/
-    transform: translateX(5.555556rem);
-    -webkit-transform: translateX(5.555556rem);
+    left:5.555556rem;
+   /* transform: translateX(5.555556rem);
+    -webkit-transform: translateX(5.555556rem);*/
 }
 .sidebar-extend .navbar-collapse{
     /*left:0;*/
