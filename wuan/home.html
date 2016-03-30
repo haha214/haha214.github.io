@@ -15,18 +15,16 @@
     </head>
     <body>
     <div class="container all-wrapper">
-  <!--       <nav class="navbar-blue container">
-
-        </nav> -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="" title="" class="navbar-brand">午安网</a>
-            </div>
-            <div class="navbar-collapse" id="wu-nav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a href="" title="" class="navbar-brand">午安网</a>
+        </div>
+        <div class="navbar-collapse">
+            <div class="navbar-collapse-content">
                 <h1 class="navbar-title">午安网</h1>
                 <ul class="navbar-option">
                     <li class="navbar-option-item"><a href="" title="" class="navbar-active navbar-icon">发现</a></li>
@@ -37,8 +35,9 @@
                     <li class="navbar-account-item"><a href="" title="" class="navbar-icon">登录</a></li>
                     <li class="navbar-account-item"><a href="" title="" class="navbar-icon">注册</a></li>
                 </ul>
-            </div>
-        <div class="main">
+            </div>   
+        </div>
+        <div class="main container">
            <div class="location clearfix">
                 <h1>首页</h1>
                 <a href="" title="">创建星球</a>
@@ -83,11 +82,11 @@
                    </div>
                 </div>
             </div> 
-        </div>
-        <div class="page-turn">
-            <span><a href="" title="">上一页</a></span>
-            <span>1/235</span>
-            <span><a href="" title="">下一页</a></span>
+            <div class="page-turn">
+                <span><a href="" title="">上一页</a></span>
+                <span>1/235</span>
+                <span><a href="" title="">下一页</a></span>
+            </div>
         </div>
     </div>
         
@@ -97,7 +96,7 @@
             $(document).ready(function() {
                 $(".navbar-toggle").click(function(event) {
                     /* Act on the event */
-                    $(".all-wrapper").toggleClass('sidebar-extend');
+                    $(".all-wrapper").toggleClass('sidebar-extend');  
                 });
             });
         </script>

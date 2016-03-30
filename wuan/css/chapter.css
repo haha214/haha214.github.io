@@ -55,6 +55,7 @@
 .chapter-img{
     position: relative;
     margin-bottom: 0.388889rem;
+    z-index: 0;
 }
 .chapter-img>img{
     width:2.12963rem;
@@ -66,9 +67,8 @@
 .chapter-img>img:nth-child(2){
     position: absolute;
     left:50%;
-    transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-            
+    transform: translateX(-50%);        
     top:0;
 }
 .chapter-img>img:nth-child(3){

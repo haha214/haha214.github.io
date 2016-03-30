@@ -35,19 +35,14 @@ h1,h2,h3,h4,h5,p,ul,li{
 .clearfix:after,.row:after,.container:after,.navbar-header:after,.navbar-collapse:after{
     clear:both;
 }
-body{
-    overflow-x: hidden;
-}
 .all-wrapper{  
     position: relative;
     left:0; 
     -webkit-transition: left .25s linear; 
-            transition: left .25s linear;
+    transition: left .25s linear;
     background-color: #f6fafb;
     min-height: 100%;
-    /*overflow:hidden;*/
-   /* z-index: auto;*/
-  
+    overflow: hidden;
 }
 @media (min-width:768px){
     .all-wrapper{
@@ -55,21 +50,17 @@ body{
     }
 }
 /*导航条*/
-nav{
-    position: relative;
-}
-.navbar-blue{
-    background-color: #5ab8fe;
-    color:#fff;
-}
-.navbar-blue a{
-    color:#fff;
-}
 .navbar-header{
-    position: relative;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
     text-align: center;
     background-color: #5ab8fe;
     color:#fff;
+    -webkit-transition: left .25s linear; 
+    transition: left .25s linear;
+    z-index: 1;
 }
 .navbar-header a{
     color:#fff;
@@ -101,10 +92,8 @@ nav{
 /*折叠菜单*/
 .navbar-collapse{
     position: fixed;
-  
-    width:5.555556rem;
+    width:100%;
     top:0;
-    /*bottom:0;*/
     left:0;
     height:100%;
     overflow-y: auto;
@@ -113,10 +102,13 @@ nav{
     color:#fff;
     text-align: center;
     -webkit-transition:z-index .3s linear;
-            transition:z-index .3s linear;
+    transition:z-index .3s linear;
 }
 .navbar-collapse a{
     color:#fff;
+}
+.navbar-collapse-content{
+    width:5.555556rem;
 }
 /*折叠标题*/
 .navbar-title{
@@ -199,22 +191,21 @@ nav{
     background-image: url(../images/navbar-icons_04.png);
 }
 /*折叠状态*/
-.sidebar-extend.all-wrapper{
+.sidebar-extend .navbar-header{
     left:5.555556rem;
-   /* transform: translateX(5.555556rem);
-    -webkit-transform: translateX(5.555556rem);*/
+}
+.sidebar-extend .main{
+    left:5.555556rem;
 }
 .sidebar-extend .navbar-collapse{
-    /*left:0;*/
     z-index: auto;
-  /*  left:-5.555556rem;*/
 }
+
 @media (min-width:768px){
     /*导航条头部*/
     .navbar-header{
         position: absolute;
-        top:0;
-        left:0;
+        width:auto;
     }
     /*折叠按钮*/
     .navbar-toggle{
@@ -229,9 +220,12 @@ nav{
     /*折叠菜单*/
     .navbar-collapse{
         position: relative;
-        background-color: transparent;
+        background-color: #5ab8fe;
         width:100%;
         z-index: 0;
+    }
+    .navbar-collapse-content{
+        width:100%;
     }
     /*折叠标题*/
     .navbar-title{
@@ -286,19 +280,25 @@ nav{
     .sidebar-extend.all-wrapper{
         left:0;
     }
-/*    .sidebar-extend .navbar-collapse{
-        width:100%;
-        left:0;
-    }*/
+
 }
 .main{
     padding:0 0.462963rem;
+    margin-top: 1.240741rem;
+    position: relative;
+    left:0;
+    background-color: inherit;
+    -webkit-transition: left .25s linear; 
+    transition: left .25s linear;
 }
 @media (min-width:768px){
     .main{
         width:750px;
         margin:0 auto;
-        padding:35px 0 15px;
+        padding: 35px 0 0;
+    }
+    .sidebar-extend .main{
+        left:0;
     }
 }
 /*翻页模块*/
@@ -318,7 +318,7 @@ nav{
     .page-turn{
         font-size: 22.22px;
         line-height: 27px;
-        padding:77px 0;
+        padding:92px 0 77px;
     }
     .page-turn>span{
         margin:0 20px;
