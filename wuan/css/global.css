@@ -62,6 +62,11 @@ nav{
 .navbar-header{
     position: relative;
     text-align: center;
+    background-color: #5ab8fe;
+    color:#fff;
+}
+.navbar-header a{
+    color:#fff;
 }
 /*导航brand*/
 .navbar-brand{
@@ -92,15 +97,18 @@ nav{
     position: fixed;
     width:5.555556rem;
     top:0;
-    bottom:0;
+    /*bottom:0;*/
     left:0;
-    /*left:calc(-5.555556rem - 200px);*/
-    /*left:-5.555556rem;*/
+    height:100%;
     z-index: -1;
     background-color: #53aaeb;
+    color:#fff;
     text-align: center;
     -webkit-transition:z-index .3s linear;
             transition:z-index .3s linear;
+}
+.navbar-collapse a{
+    color:#fff;
 }
 /*折叠标题*/
 .navbar-title{
