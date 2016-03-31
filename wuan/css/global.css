@@ -74,8 +74,9 @@ h1,h2,h3,h4,h5,p,ul,li{
 .navbar-toggle{
     position: absolute;
     background-color: inherit;
-    left:0.462963rem;
-    top:0.416667rem;
+    padding:0.185185rem;
+    left:0.277778rem;
+    top:0.231481rem;
     cursor: pointer;
 }
 .icon-bar{
