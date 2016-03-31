@@ -28,7 +28,7 @@ h1,h2,h3,h4,h5,p,ul,li{
 :before,:after{
     box-sizing: border-box;
 }
-.clearfix:before,.clearfix:after,.container:before,.container:after,.row:before,.row:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after{
+.clearfix:before,.clearfix:after,.container:before,.container:after,.row:before,.row:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after,.main:before,.main:after{
     display:table;
     content: "";
 }
@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,p,ul,li{
 }
 .all-wrapper{  
     position: relative;
-    left:0; 
+    /*left:0;*/ 
     background-color: #f6fafb;
     min-height: 100%;
     overflow: hidden;
@@ -74,9 +74,10 @@ h1,h2,h3,h4,h5,p,ul,li{
 .navbar-toggle{
     position: absolute;
     background-color: inherit;
-    padding:0.416667rem 0.407407rem;
+    padding:0 0.407407rem;;
     left:0;
     top:0;
+    bottom:0;
     cursor: pointer;
 }
 .icon-bar{
@@ -321,12 +322,44 @@ h1,h2,h3,h4,h5,p,ul,li{
         left:0 !important;
     }
 }
+/*当前位置*/
+.location{
+    padding:0.62963rem 0 0.351852rem;
+}
+.location>h1{
+    font-size: 0.648148rem;
+    line-height: 0.740741rem;
+    float: left;
+    color:#5ab8fe;
+}
+.location>a{
+    display:inline-block;
+    color:#f6fafb;
+    font-size: 0.333333rem;
+    line-height: 0.37963rem;
+    padding:0.138889rem 0.185185rem;
+    background-color: #5ab8fe;
+    float:right;
+    border-radius: 5px 5px;
+}
+[data-dpr="2"] .location>a{
+    border-radius: 10px 10px;
+}
+[data-dpr="3"] .location>a{
+    border-radius: 15px 15px;
+}
+@media (min-width:768px){
+    .location{
+        display:none;
+    }
+}
 /*翻页模块*/
 .page-turn{
     font-size: 0.462963rem;
-    line-height: 1.87963rem;
+    line-height: 0.518519rem;
     color:#949494;
     text-align: center;
+    padding:0.25rem 0 0.694444rem;
 }
 .page-turn>span{
     margin:0 0.324074rem;
@@ -342,5 +375,14 @@ h1,h2,h3,h4,h5,p,ul,li{
     }
     .page-turn>span{
         margin:0 20px;
+    }
+    .no-pape .page-turn{
+        display:none;
+    }
+}
+@media (min-width:768px){
+    .col-sm-4{
+        width:33.33333333%;
+        float:left;
     }
 }
