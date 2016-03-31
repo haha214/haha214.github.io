@@ -92,7 +92,6 @@ h1,h2,h3,h4,h5,p,ul,li{
     position: fixed;
     width:100%;
     top:0;
-    /*left:5%;*/
     left:0;
     height:100%;
     overflow-y: auto;
@@ -107,6 +106,7 @@ h1,h2,h3,h4,h5,p,ul,li{
 }
 .navbar-collapse-content{
     width:5.555556rem;
+    padding-bottom: 2.314815rem;
 }
 
 /*折叠标题*/
@@ -221,10 +221,12 @@ h1,h2,h3,h4,h5,p,ul,li{
         position: relative;
         background-color: #5ab8fe;
         width:100%;
+        height:auto;
         left:0 !important;
     }
     .navbar-collapse-content{
         width:100%;
+        padding-bottom: 0;
     }
     /*折叠标题*/
     .navbar-title{
