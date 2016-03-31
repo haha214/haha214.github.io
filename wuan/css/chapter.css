@@ -1,34 +1,4 @@
-/*当前位置*/
-.location{
-    padding:0.62963rem 0 0.351852rem;
-}
-.location>h1{
-    font-size: 0.648148rem;
-    line-height: 0.740741rem;
-    float: left;
-    color:#5ab8fe;
-}
-.location>a{
-    display:inline-block;
-    color:#f6fafb;
-    font-size: 0.333333rem;
-    line-height: 0.37963rem;
-    padding:0.138889rem 0.185185rem;
-    background-color: #5ab8fe;
-    float:right;
-    border-radius: 5px 5px;
-}
-[data-dpr="2"] .location>a{
-    border-radius: 10px 10px;
-}
-[data-dpr="3"] .location>a{
-    border-radius: 15px 15px;
-}
-@media (min-width:768px){
-    .location{
-        display:none;
-    }
-}
+
 /*文章*/
 .chapter{
     padding:0.37037rem 0 0.398148rem;
