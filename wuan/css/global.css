@@ -181,7 +181,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     border-radius: 27px;
 }
 .navbar-account-item>a:before{
-    height:0.5rem;
+    /*height:0.5rem;*/
+    height:0.509259rem;
     width:0.518519rem;
     margin-right: 0.166667rem;
 }
