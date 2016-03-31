@@ -56,8 +56,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     text-align: center;
     background-color: #5ab8fe;
     color:#fff;
-    -webkit-transition: left .2s linear; 
-    transition: left .2s linear;
+    -webkit-transition: left .15s linear; 
+    transition: left .15s linear;
     z-index: 1;
 }
 .navbar-header a{
@@ -284,8 +284,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     position: relative;
     left:0;
     background-color: inherit;
-    -webkit-transition: left .2s linear; 
-    transition: left .2s linear;
+    -webkit-transition: left .15s linear; 
+    transition: left .15s linear;
     min-height: 100%;
 }
 /*折叠状态*/
