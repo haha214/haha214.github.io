@@ -15,6 +15,7 @@
     line-height: 0.555556rem;
     color:#363636;
     margin-bottom: 0.259259rem;
+    font-weight: bold;
 }
 .chapter>p{
     font-size: 0.37037rem;
@@ -89,5 +90,8 @@
     }
     .cha-time{
         margin-right: 0;
+    }
+    .chapter-col{
+        margin-top: 35px;
     }
 }

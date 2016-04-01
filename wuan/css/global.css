@@ -7,7 +7,10 @@ body{
 }
 button{
     outline: none;
-    border:none;
+    border:none; 
+}
+input,textarea,button{
+   font-family: 'Microsoft YaHei',sans-serif; 
 }
 img{
     vertical-align: middle;
@@ -21,6 +24,9 @@ a:hover{
 h1,h2,h3,h4,h5,p,ul,li{
     margin:0;
     padding:0;
+}
+ul{
+    list-style: none;
 }
 *{
     box-sizing: border-box;
@@ -37,7 +43,6 @@ h1,h2,h3,h4,h5,p,ul,li{
 }
 .all-wrapper{  
     position: relative;
-    /*left:0;*/ 
     background-color: #f6fafb;
     min-height: 100%;
     overflow: hidden;
@@ -47,7 +52,7 @@ h1,h2,h3,h4,h5,p,ul,li{
         background-color: #fff;
     }
 }
-/*导航条*/
+/*移动端导航头部*/
 .navbar-header{
     position: fixed;
     top:0;
@@ -66,7 +71,8 @@ h1,h2,h3,h4,h5,p,ul,li{
 /*导航brand*/
 .navbar-brand{
     font-size: 0.555556rem;
-    line-height: 0.537037rem;
+    /*line-height: 0.537037rem;*/
+    line-height: 0.967;
     padding:0.351852rem 0;   
     display:inline-block;
 }
@@ -89,7 +95,7 @@ h1,h2,h3,h4,h5,p,ul,li{
 .icon-bar+.icon-bar{
     margin-top: 0.083333rem;
 }
-/*折叠菜单*/
+/*移动端侧栏+PC端导航*/
 .navbar-collapse{
     position: fixed;
     width:100%;
@@ -97,11 +103,9 @@ h1,h2,h3,h4,h5,p,ul,li{
     left:0;
     height:100%;
     overflow-y: auto;
-    background-color: #53aaeb;
+    background-color: inherit;
     color:#fff;
     text-align: center;
-    -webkit-transition:left .3s linear;
-    transition:left .3s linear;
 }
 .navbar-collapse a{
     color:#fff;
@@ -109,13 +113,15 @@ h1,h2,h3,h4,h5,p,ul,li{
 .navbar-collapse-content{
     width:5.555556rem;
     padding-bottom: 2.314815rem;
+    background-color: #53aaeb;  
 }
 
 /*折叠标题*/
 .navbar-title{
     padding:1.462963rem 0 1.555556rem;
     font-size: 0.648148rem;
-    line-height: 0.611111rem;
+    /*line-height: 0.611111rem;*/
+    line-height: 0.943;
     border-bottom: 1px solid;
 }
 [data-dpr="2"] .navbar-title{
@@ -135,8 +141,15 @@ h1,h2,h3,h4,h5,p,ul,li{
     padding:0.37037rem 0 ;
     border-bottom:1px solid;
     font-size: 0.462963rem;
-    line-height: 0.509259rem;
+    /*line-height: 0.509259rem;*/
+    line-height: 1.1;
     position: relative;
+}
+[data-dpr="2"] .navbar-option-item>a{
+    border-bottom-width: 2px;
+}
+[data-dpr="3"] .navbar-option-item>a{
+    border-bottom-width: 3px;
 }
 /*文字前方小图标*/
 .navbar-icon:before{
@@ -166,8 +179,9 @@ h1,h2,h3,h4,h5,p,ul,li{
 }
 .navbar-account-item>a{
     display:inline-block;
-    line-height: 0.509259rem;
+    /*line-height: 0.509259rem;*/
     font-size: 0.462963rem; 
+    line-height: 1.1;
     background-color: #fff;
     width:3.703704rem;
     padding:0.185185rem 0 ;
@@ -197,32 +211,18 @@ h1,h2,h3,h4,h5,p,ul,li{
     left:5.555556rem;
 }
 
-/*.sidebar-extend .navbar-collapse{
-   left:0;
-}*/
+.sidebar-extend .navbar-collapse-content{
+   min-height: 100%;
+}
 
 @media (min-width:768px){
     /*导航条头部*/
     .navbar-header{
-        position: absolute;
-        width:auto;
-        left:0!important;
-        background-color: transparent;
-    }
-    /*折叠按钮*/
-    .navbar-toggle{
         display:none;
     }
-    /*导航条brand*/
-    .navbar-brand{
-        font-size: 30px;
-        line-height: 28px;
-        padding:24px 0 22px 50px;
-    }
-    /*折叠菜单*/
+    /*PC端导航+移动端侧栏*/
     .navbar-collapse{
         position: relative;
-        background-color: #5ab8fe;
         width:100%;
         height:auto;
         left:0 !important;
@@ -230,10 +230,21 @@ h1,h2,h3,h4,h5,p,ul,li{
     .navbar-collapse-content{
         width:100%;
         padding-bottom: 0;
+        background-color: #5ab8fe;
+        position:relative;
     }
     /*折叠标题*/
     .navbar-title{
-        display:none;
+        /*display:none;*/
+        font-size: 30px;
+       /* line-height: 28px;*/
+        line-height: 0.933;
+        padding:24px 0 22px 50px;
+        border-bottom: none;
+        position: absolute;
+        left:0;
+        top:0;
+        bottom:0;
     }
     /*折叠选项*/
     .navbar-option{
@@ -248,7 +259,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     .navbar-option-item>a{
         padding:5px 10px;
         font-size: 24px;
-        line-height: 28px;
+       /* line-height: 28px;*/
+        line-height: 1.167;
         border-bottom: none;
         border-radius: 5px 5px ;
     }
@@ -264,6 +276,7 @@ h1,h2,h3,h4,h5,p,ul,li{
         position: absolute;
         right:35px;
         top:0;
+        bottom:0;
     }
     .navbar-account-item{
         float:left;
@@ -271,7 +284,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     }
     .navbar-account-item>a{
         font-size: 18px;
-        line-height: 20px;
+        /*line-height: 20px;*/
+        line-height: 1.11;
         padding:31px 15px 23px;
         width:auto;
         color:inherit;
@@ -288,7 +302,7 @@ h1,h2,h3,h4,h5,p,ul,li{
     background-color: inherit;
     -webkit-transition: left .15s linear; 
     transition: left .15s linear;
-    min-height: 100%;
+   /* min-height: 100%;*/
 }
 /*折叠状态*/
 .sidebar-extend .main{
@@ -319,7 +333,7 @@ h1,h2,h3,h4,h5,p,ul,li{
     .main{
         width:750px;
         margin:0 auto;
-        padding: 35px 0 0;
+        padding: 0;
         left:0 !important;
     }
 }
@@ -329,7 +343,8 @@ h1,h2,h3,h4,h5,p,ul,li{
 }
 .location>h1{
     font-size: 0.648148rem;
-    line-height: 0.740741rem;
+    /*line-height: 0.740741rem;*/
+    line-height: 1.143;
     float: left;
     color:#5ab8fe;
 }
@@ -337,7 +352,8 @@ h1,h2,h3,h4,h5,p,ul,li{
     display:inline-block;
     color:#f6fafb;
     font-size: 0.333333rem;
-    line-height: 0.37963rem;
+    /*line-height: 0.37963rem;*/
+    line-height: 1.139;
     padding:0.138889rem 0.185185rem;
     background-color: #5ab8fe;
     float:right;
@@ -357,7 +373,8 @@ h1,h2,h3,h4,h5,p,ul,li{
 /*翻页模块*/
 .page-turn{
     font-size: 0.462963rem;
-    line-height: 0.518519rem;
+    /*line-height: 0.518519rem;*/
+    line-height: 1.12;
     color:#949494;
     text-align: center;
     padding:0.25rem 0 0.694444rem;
@@ -371,7 +388,8 @@ h1,h2,h3,h4,h5,p,ul,li{
 @media (min-width:768px){
     .page-turn{
         font-size: 22.22px;
-        line-height: 27px;
+      /*  line-height: 27px;*/
+        line-height:1.215 ;
         padding:92px 0 77px;
     }
     .page-turn>span{
