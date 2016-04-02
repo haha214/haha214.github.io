@@ -72,7 +72,6 @@ ul{
 /*导航brand*/
 .navbar-brand{
     font-size: 0.555556rem;
-    /*line-height: 0.537037rem;*/
     line-height: 0.967;
     padding:0.351852rem 0;   
     display:inline-block;
@@ -121,8 +120,6 @@ ul{
 .navbar-title{
     padding:1.462963rem 0 1.555556rem;
     font-size: 0.648148rem;
-    /*line-height: 0.611111rem;*/
-   /* line-height: 0.943;*/
     border-bottom: 1px solid;
 }
 [data-dpr="2"] .navbar-title{
@@ -181,7 +178,6 @@ ul{
 }
 .navbar-account-item>a{
     display:inline-block;
-    /*line-height: 0.509259rem;*/
     background-color: #fff;
     width:3.703704rem;
     padding:0.185185rem 0 ;
