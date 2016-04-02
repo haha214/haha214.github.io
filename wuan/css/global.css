@@ -114,6 +114,7 @@ ul{
     width:5.555556rem;
     padding-bottom: 2.314815rem;
     background-color: #53aaeb;  
+    min-height: 100%;
 }
 
 /*折叠标题*/
@@ -207,9 +208,9 @@ ul{
     left:5.555556rem;
 }
 
-.sidebar-extend .navbar-collapse-content{
+/*.sidebar-extend .navbar-collapse-content{
    min-height: 100%;
-}
+}*/
 
 @media (min-width:768px){
     /*导航条头部*/
@@ -289,13 +290,13 @@ ul{
     }
 }
 .main{
-    padding:1.240741rem 0.462963rem 0;
+    margin-top:1.240741rem ;
+    padding: 0 0.462963rem ;
     position: relative;
     left:0;
     background-color: inherit;
     -webkit-transition: left .15s linear; 
     transition: left .15s linear;
-   /* min-height: 100%;*/
 }
 /*折叠状态*/
 .sidebar-extend .main{
