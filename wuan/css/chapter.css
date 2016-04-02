@@ -1,7 +1,7 @@
 
 /*文章*/
 .chapter{
-    padding:0.37037rem 0 0.398148rem;
+    padding:0.305556rem 0 0.240741rem;
     border-bottom: 1px solid #e8e8e8;
 }
 [data-dpr="2"] .chapter{
@@ -12,21 +12,20 @@
 }
 .chapter>h2{
     font-size: 0.462963rem;
-    line-height: 0.555556rem;
     color:#363636;
-    margin-bottom: 0.259259rem;
+    margin-bottom: 0.185185rem;
     font-weight: bold;
 }
 .chapter>p{
     font-size: 0.37037rem;
-    line-height: 0.555556rem;
-    margin-bottom: 0.203704rem;
+    margin-bottom: 0.231481rem;
     color:#5c5c5c;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 .chapter-img{
     position: relative;
-    margin-bottom: 0.388889rem;
-    z-index: 0;
+    margin-bottom: 0.37037rem;
 }
 .chapter-img>img{
     width:2.12963rem;
@@ -47,7 +46,6 @@
 }
 .chapter-info{
     font-size: 0.333333rem;
-    line-height: 0.37037rem;
     color:#a7a7a7;
 }
 .chapter-info a{
@@ -59,30 +57,27 @@
 }
 @media (min-width:768px){
     .chapter{
-        padding:29px 0 18px;
+        padding:17px 0 7px;
     }
     .chapter>h2{
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 18px;
         color:#5ab8fe;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
     .chapter>p{
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 14px;
         color:#5c5c5c;
-        margin-bottom: 18px;
+        margin-bottom: 9px;
     }
     .chapter-img{
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
     .chapter-img>img{
-        width:140px;
-        height:140px;
+        width:100px;
+        height:100px;
     }
     .chapter-info{
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 12px;
         color:#999999;
     }
     .chapter-info a{
@@ -90,8 +85,5 @@
     }
     .cha-time{
         margin-right: 0;
-    }
-    .chapter-col{
-        margin-top: 35px;
     }
 }
