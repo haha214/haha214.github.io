@@ -3,17 +3,15 @@
 }
 /*帖子内容模块*/
 .post-md{
-    margin-bottom: 0.444444rem;
+    margin-bottom: 0.296296rem;
 }
 .post-title{
     font-size: 0.555556rem;
-    line-height: 1.5;
     color: #363636;
     margin-bottom: 0.185185rem;
 }
 .post-info{
     font-size: 0.333333rem;
-    line-height: 1.138;
     color:#a7a7a7;
     margin-bottom: 0.37037rem;
 }
@@ -27,13 +25,12 @@
     word-wrap: break-word;
     white-space: pre-wrap;
     font-size: 0.37037rem;
-    line-height: 1.5;
     color:#5c5c5c;
-    padding: 0 0.277778rem 0.898148rem;
+    /*padding: 0 0.277778rem 0.898148rem;*/
+    margin-bottom: 0.898148rem;
 }
 .post-opt{
     font-size: 0.425926rem;
-    line-height: 1.15;
     margin-right: -0.166667rem;
     margin-left: -0.166667rem;
     text-align: right;
@@ -45,17 +42,17 @@
 }
 /*帖子回复*/
 .post-comment{
-    margin-bottom: 1.527778rem;
+    margin-bottom: 1.388889rem;
 }
 .post-comment>h2{
     color:#a7a7a7;
     font-size: 0.462963rem;
     line-height: 1.2;
-    margin-bottom: 0.296296rem;
+    margin-bottom: 0.203704rem;
 }
 /*单条回复*/
 .post-cm-item{
-    padding:0.398148rem 0 0.185185rem;
+    padding:0.333333rem 0 0.222222rem;
     border-bottom: 1px solid #e8e8e8;
 }
 [data-dpr="2"] .post-cm-item{
@@ -67,9 +64,8 @@
 /*回复信息*/
 .post-cm-info{
     font-size: 0.37037rem;
-    line-height: 1.15;
     color:#363636;
-    margin-bottom: 0.138889rem;
+    margin-bottom: 0.046296rem;
 }
 .post-cm-info a{
     color:#363636;
@@ -80,7 +76,6 @@
 /*回复内容*/
 .post-cm-content{
     font-size: 0.37037rem;
-    line-height: 1.5;
     word-wrap: break-word;
     white-space: pre-wrap;
     color:#5b5b5b;
@@ -92,8 +87,7 @@
 .my-comment>h2{
     color:#5ab8fe;
     font-size: 0.555556rem;
-    line-height: 1.11667;
-    margin-bottom: 0.324074rem;
+    margin-bottom: 0.231481rem;
 }
 /*表单*/
 .post-detail-form textarea{
@@ -103,69 +97,61 @@
 
 @media (min-width:768px){
     .post-detail{
-        padding:27px 0 90px;
+        padding:22px 0 93px;
     }
     /*帖子内容模块*/
     .post-md{
-        margin-bottom: 48px;
+        margin-bottom: 68px;
     }
     .post-title{
-        font-size: 60px;
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size:24px;
+        margin-bottom: 0;
     }
     .post-info{
-        font-size: 36px;
-        line-height: 1.138;
-        margin-bottom: 40px;
+        font-size: 12px;
+        margin-bottom: 9px;
     }
     .post-content{
-        font-size: 40px;
-        line-height:1.5;
-        padding: 0 30px 97px;
+        font-size: 14px;
+        margin-bottom: 23px;
     }
     .post-opt{
-        font-size: 46px;
-        line-height: 1.15;
-        margin-right: -18px;
-        margin-left: -18px;
+        font-size: 18px;
+        margin-right: -5px;
+        margin-left: -5px;
     }
     .post-opt-item{
-        padding:0 18px;
+        padding:0 5px;
     }
     /*帖子回复*/
     .post-comment{
-        margin-bottom: 165px;
-    }
-    .post-comment>h2{
-        font-size: 50px;
-        line-height: 1.2;
         margin-bottom: 32px;
     }
+    .post-comment>h2{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
     .post-cm-item{
-        padding:43px 0 20px;
+        padding:13px 0 4px;
     }
     .post-cm-info{
-        font-size: 40px;
-        line-height:1.15;
-        margin-bottom: 15px;
+        font-size: 12px;
+        margin-bottom: 5px;
     }
     .post-cm-content{
-        font-size: 40px;
-        line-height: 1.5;
+        font-size: 12px;
     }
     /*我的回复*/
     .my-comment{
     
     }
     .my-comment>h2{
-        font-size: 60px;
-        line-height: 1.11667;
-        margin-bottom: 35px;
+        font-size: 18px;
+        margin-bottom: 14px;
     }
     /*表单*/
     .post-detail-form textarea{
-        margin-bottom: 125px;
-        height:375px;
+        margin-bottom: 20px;
+        height:161px;
     }
 }
