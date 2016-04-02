@@ -21,11 +21,14 @@
 .planet-info{
     color:#bbbbbb;
     font-size: 0.37037rem;
-    line-height: 0.444444rem;
+}
+.planet-info:before{
+    content:"";
+    display:table;
 }
 .planet-info h2{
     font-size: 0.462963rem;
-    line-height: 0.814815rem;
+    margin-top: 0.074074rem;
 }
 .planet-info a{
     color:#5ab8fe;    
@@ -48,13 +51,12 @@
     }
     .planet-info{
         font-size: 16px;
-        line-height: 19px;
     }
     .planet-info h2{
         font-size: 20px;
-        line-height: 36px;
+        margin-top: 3.5px;
     }
     .planet{
-        margin:58px 0 86px;
+        margin:48px 0 86px;
     }
 }
