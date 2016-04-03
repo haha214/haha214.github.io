@@ -47,6 +47,7 @@ ul{
     background-color: #f6fafb;
     min-height: 100%;
     overflow: hidden;
+    z-index: 0;
 }
 @media (min-width:768px){
     .all-wrapper{
@@ -290,13 +291,15 @@ ul{
     }
 }
 .main{
-    margin-top:1.240741rem ;
+    margin-top:1.2rem ;
     padding: 0 0.462963rem ;
     position: relative;
     left:0;
     background-color: inherit;
     -webkit-transition: left .15s linear; 
     transition: left .15s linear;
+    width:100%;
+   /* overflow:auto;*/
 }
 /*折叠状态*/
 .sidebar-extend .main{

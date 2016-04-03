@@ -54,7 +54,7 @@
             </div>
         </div>
         <script>
-            document.getElementsByClassName("main")[0].style.minHeight = window.innerHeight + "px";
+            // document.getElementsByClassName("main")[0].style.minHeight = window.innerHeight + "px";
         </script>
     </div>
 
@@ -64,6 +64,15 @@
                 $(".navbar-toggle").click(function(event) {
                     /* Act on the event */
                     $(".all-wrapper").toggleClass('sidebar-extend');  
+                });
+                $(window).resize(function(event){
+                    var mainMinHeight;
+                    if ($(window).width()<768) {
+                        mainMinHeight = $(window).height() - $(".navbar-header").height();
+                    }else{
+                         mainMinHeight = $(window).height() - $(".navbar-collapse").height();
+                     }
+                    $(".main").css("min-height",mainMinHeight);
                 });
             });
         </script>

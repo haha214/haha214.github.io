@@ -67,6 +67,15 @@
                     /* Act on the event */
                     $(".all-wrapper").toggleClass('sidebar-extend');  
                 });
+                $(window).resize(function(event){
+                    var mainMinHeight;
+                    if ($(window).width()<768) {
+                        mainMinHeight = $(window).height() - $(".navbar-header").height();
+                    }else{
+                         mainMinHeight = $(window).height() - $(".navbar-collapse").height();
+                     }
+                    $(".main").css("min-height",mainMinHeight);
+                });
             });
         </script>
     </body>
