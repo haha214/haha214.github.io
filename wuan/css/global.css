@@ -138,16 +138,17 @@ ul{
     font-size: 0.462963rem;
     line-height: 1.1;
 }
-.navbar-option-item>a{
+
+.navbar-option-item{
     display:block;
     padding:0.37037rem 0 ;
     border-bottom:1px solid;
     position: relative;
 }
-[data-dpr="2"] .navbar-option-item>a{
+[data-dpr="2"] .navbar-option-item{
     border-bottom-width: 2px;
 }
-[data-dpr="3"] .navbar-option-item>a{
+[data-dpr="3"] .navbar-option-item{
     border-bottom-width: 3px;
 }
 /*文字前方小图标*/
@@ -157,52 +158,70 @@ ul{
     vertical-align: bottom;
     background-size: 100% 100%;
 }
-.navbar-option-item>a:before{
+.navbar-option-item:before{
     width:0.509259rem;
     height:0.509259rem;
     margin-right: 0.138889rem;
 }
-.navbar-option-item:nth-child(1)>a:before{
+.navbar-option>li:nth-child(1) .navbar-option-item:before{
     background-image: url(../images/navbar-icons_03.png);
 }
-.navbar-option-item:nth-child(2)>a:before{
+.navbar-option>li:nth-child(2) .navbar-option-item:before{
     background-image: url(../images/navbar-icons_06.png);
 }
-.navbar-option-item:nth-child(3)>a:before{
+.navbar-option>li:nth-child(3) .navbar-option-item:before{
     background-image: url(../images/navbar-icons_09.png);
 }
 /*折叠账户*/
 
-.navbar-account-item{
+.navbar-account>li{
     margin-bottom: 0.37037rem;
     font-size: 0.462963rem; 
     line-height: 1.1;
 }
-.navbar-account-item>a{
+.navbar-account-item{
     display:inline-block;
-    background-color: #fff;
     width:3.703704rem;
     padding:0.185185rem 0 ;
     border-radius: 9px; 
+}
+a.navbar-account-item{
+    background-color: #fff;
     color:#53aaeb;
 }
-[data-dpr="2"] .navbar-account-item>a{
+span.navbar-account-item{
+    background-color: #5ab8fe;
+    color:#fff;
+}
+[data-dpr="2"] .navbar-account-item{
     border-radius: 18px;
 }
-[data-dpr="3"] .navbar-account-item>a{
+[data-dpr="3"] .navbar-account-item{
     border-radius: 27px;
 }
-.navbar-account-item>a:before{
+.navbar-account-item:before{
     /*height:0.5rem;*/
     height:0.509259rem;
     width:0.518519rem;
     margin-right: 0.166667rem;
 }
-.navbar-account-item:nth-child(1)>a:before{
+.navbar-account>li:nth-child(1) .navbar-account-item:before{
     background-image: url(../images/navbar-icons_02.png);
 }
-.navbar-account-item:nth-child(2)>a:before{
+.navbar-account>li:nth-child(2) .navbar-account-item:before{
     background-image: url(../images/navbar-icons_04.png);
+}
+.navbar-account>li:nth-child(3) .navbar-account-item:before{
+    background-image: url(../images/navbar-icons_05.png);
+}
+.navbar-account>li:nth-child(4) .navbar-account-item:before{
+    background-image: url(../images/exit_03.png);
+}
+.nav-anone{
+    display:none;
+}
+.nav-ahidden{
+    visibility: hidden;
 }
 /*折叠状态*/
 .sidebar-extend .navbar-header{
@@ -249,18 +268,18 @@ ul{
         margin:0;
         text-align: center;
     }
-    .navbar-option-item{
+    .navbar-option>li{
         display:inline-block;
         margin:0 26px;
         font-size: 22px;
         line-height: 1.5;
     }
-    .navbar-option-item>a{
+    .navbar-option-item{
         padding:3.5px 10px;
         border-bottom: none;
         border-radius: 5px 5px ;
     }
-    .navbar-option-item>a:before{
+    .navbar-option-item:before{
         display:none;
     }
     /*选中状态*/
@@ -274,19 +293,19 @@ ul{
         top:0;
         bottom:0;
     }
-    .navbar-account-item{
+    .navbar-account>li{
         float:left;
         margin-bottom: 0;
         font-size: 18px;
         line-height: 1.5;
     }
-    .navbar-account-item>a{
+    .navbar-account-item{
         padding:16.5px 15px ;
         width:auto;
-        color:inherit;
-        background-color: inherit;
+        color:inherit !important;
+        background-color: inherit !important;
     }
-    .navbar-account-item>a:before{
+    .navbar-account-item:before{
         display:none;
     }
 }
@@ -341,8 +360,10 @@ ul{
 .location>h1{
     font-size: 0.648148rem;
     line-height: 1;
-    float: left;
-    color:#5ab8fe;
+    float: left; 
+}
+.location>h1>a{
+   color:#5ab8fe; 
 }
 .location>a{
     display:inline-block;
