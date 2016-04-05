@@ -12,9 +12,11 @@
 }
 .chapter>h2{
     font-size: 0.462963rem;
-    color:#363636;
     margin-bottom: 0.185185rem;
     font-weight: bold;
+}
+.chapter>h2>a{
+    color:#363636;
 }
 .chapter>p{
     font-size: 0.37037rem;
@@ -27,21 +29,21 @@
     position: relative;
     margin-bottom: 0.37037rem;
 }
-.chapter-img>img{
+.chapter-img img{
     width:2.12963rem;
     height:2.12963rem;
 }
-.chapter-img>img:first-child{
+.chapter-img>a:first-child{
     float:left;
 }
-.chapter-img>img:nth-child(2){
+.chapter-img>a:nth-child(2){
     position: absolute;
     left:50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);        
     top:0;
 }
-.chapter-img>img:nth-child(3){
+.chapter-img>a:nth-child(3){
     float:right;
 }
 .chapter-info{
@@ -61,8 +63,10 @@
     }
     .chapter>h2{
         font-size: 18px;
-        color:#5ab8fe;
         margin-bottom: 8px;
+    }
+    .chapter>h2>a{
+        color:#5ab8fe;
     }
     .chapter>p{
         font-size: 14px;
@@ -72,9 +76,15 @@
     .chapter-img{
         margin-bottom: 10px;
     }
-    .chapter-img>img{
+    .chapter-img img{
         width:100px;
         height:100px;
+    }
+    .chapter-img>a{
+        float:left !important;
+        position: static !important;
+        margin-right: 35px;
+        transform:none !important;
     }
     .chapter-info{
         font-size: 12px;
