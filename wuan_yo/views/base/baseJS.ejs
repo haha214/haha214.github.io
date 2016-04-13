@@ -2,6 +2,13 @@
 <script src="javascripts/sweetAlert.js" type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/template.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+	var setCenterLoadingDiv = function() {
+		var loadingClientheight = $(".uil-default-css").height();
+		var loadingClientwidth = $(".uil-default-css").width();
+		var centerheight = ($(window).height() / 2 - (loadingClientheight / 2)) + 'px'
+		var centerwidth = ($(window).width() / 2 - (loadingClientwidth / 2)) + 'px';
+		$(".uil-default-css").attr('style', 'transform: scale(0.3);margin-top:' + centerheight + ';margin-left: ' + centerwidth + ';');
+	}
 	var setMinHeight = function() {
 		var mainMinHeight;
 		if ($(window).width() < 768) {
@@ -11,14 +18,61 @@
 		}
 		$(".main").css("min-height", mainMinHeight);
 	}
+	var logout = {
+                logout: $("#logout"),
+                bindEvent:function(){
+                	var self = this;
+                	self.logout.addEventListener("click", function(event){
+                		event.preventDefault();
+                		$.ajax({
+                                type: "get",
+                                async: true,
+                                success: function(data) {
+                                    console && console.log(data);
+                                    if (data.data.code == 0 && data.data.msg) {
+                                        sweetAlert('提示', data.data.msg, 'warning');
+                                    } else {
+                                        window.location.href = '/';
+                                        localStorage.removeItem("user");
+                                    }
+                                },
+                                error: function(x, h, r) {
+                                    console && console.log(x, h, r);
+                                }
+                            });
+                	});
+                },
+                init: function(){
+                	this.bindEvent();
+                }
+            }
 	$(document).ready(function() {
 		setMinHeight();
+		setCenterLoadingDiv();
 		$(".navbar-toggle").click(function(event) {
 			/* Act on the event */
 			$(".all-wrapper").toggleClass('sidebar-extend');
 		});
 		$(window).resize(function(event) {
 			setMinHeight();
+			setCenterLoadingDiv();
 		});
+		logout.init();
 	});
 </script>
+<div class="loading">
+	<div class='uil-default-css' style='display: none;'>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+		<div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+	</div>
+</div>
