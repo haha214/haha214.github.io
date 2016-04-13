@@ -1,3 +1,17 @@
+        <script type="text/javascript">
+            if(window.localStorage){
+                var user = localStorage.getItem("user");
+                if (user!=null) {
+                    $("#login,#register").addClass('nav-anone');
+                    $("#user_id,#logout").removeClass('nav-anone');
+                    $("#user_id>span").text(user);
+                } else {
+                    $("#login,#register").removeClass('nav-anone');
+                    $("#user_id,#logout").addClass('nav-anone');
+                    $("#user_id>span").text("");
+                }
+            }
+        </script>
 </div>
         
     </body>
