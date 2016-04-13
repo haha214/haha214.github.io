@@ -64,6 +64,7 @@
 				next: $(".page-turn").find('a').last(),
 				page: $(".page-turn").find('span').eq(1),
 				main: $(".chapter-col"),
+				loading: $(".loading"),
 				currentpage: 1,
 				pageCount: 0,
 				ClientData: function() {
@@ -82,6 +83,7 @@
 						if (self.currentpage == 1) {
 							sweetAlert('错误', '当前页是第一页', 'error');
 						} else {
+							self.loading.show();
 							self.getServerData({
 								currentpage: self.currentpage - 1
 							}, function(data) {
@@ -90,6 +92,7 @@
 									var compiled = template("listtemplate", data.data);
 									self.main.html(compiled);
 									self.page.text(data.data.currentPage + '/' + data.data.pageCount);
+									self.loading.hide();
 								}
 							});
 						}
@@ -98,6 +101,7 @@
 						if (self.currentpage == self.pageCount) {
 							sweetAlert('错误', '当前页是最后一页', 'error');
 						} else {
+							self.loading.show();
 							self.getServerData({
 								currentpage: self.currentpage + 1
 							}, function(data) {
@@ -106,6 +110,7 @@
 									var compiled = template("listtemplate", data.data);
 									self.main.html(compiled);
 									self.page.text(data.data.currentPage + '/' + data.data.pageCount);
+									self.loading.hide();
 								}
 							});
 						}
