@@ -42,7 +42,7 @@
 }
 /*帖子回复*/
 .post-comment{
-    margin-bottom: 1.388889rem;
+    margin-bottom: 0.462963rem;
 }
 .post-comment>h2{
     color:#a7a7a7;
@@ -79,6 +79,12 @@
     word-wrap: break-word;
     white-space: pre-wrap;
     color:#5b5b5b;
+}
+/*回复内容的翻页*/
+.post-comment .page-turn{
+    padding:0.37037rem 0 0;
+    text-align: right;
+    font-size: 0.425926rem;
 }
 /*我的回复*/
 .my-comment{
@@ -125,7 +131,7 @@
     }
     /*帖子回复*/
     .post-comment{
-        margin-bottom: 32px;
+        margin-bottom: 20px;
     }
     .post-comment>h2{
         font-size: 18px;
@@ -140,6 +146,11 @@
     }
     .post-cm-content{
         font-size: 12px;
+    }
+    /*帖子回复翻页*/
+    .post-comment .page-turn{
+        padding:10px 0 0;
+        font-size: 16px;
     }
     /*我的回复*/
     .my-comment{
