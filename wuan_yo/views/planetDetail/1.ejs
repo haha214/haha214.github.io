@@ -1,0 +1,158 @@
+<%- include ../base/header2.ejs %>
+<%- include ../base/planetDetailH.ejs %>
+<%- include ../base/navbar.ejs %>
+        <div class="main">
+           <div class="location clearfix">
+                <h1><a href="#" title=""><%=posts[0].groupName%></a></h1>
+                <a href="" title="" id="joinBtn">+加入</a>
+            </div>
+            <div class="chapter-col">
+              <% posts.forEach(function(item) { %>
+                <div class="chapter">
+                  <h2><a href="#?" title=""><%=item.title%></a></h2>
+                  <p><%=item.text%></p>
+                  <div class="chapter-info">
+                    <span><a href="#?" title=""><%=item.nickname%></a></span>
+                    <span>发表于</span>
+                    <span><a href="" title=""><%=item.groupName%></a></span>
+                    <span class="cha-time"><%=item.createTime%></span>
+                  </div>
+                </div>
+               <% }); %>
+            </div> 
+            <div class="page-turn">
+                <span><a href="#?" title="">上一页</a></span>
+                <span><%=currentPage%>/<%=pageCount%></span>
+                <span><a href="#?" title="">下一页</a></span>
+            </div>
+        </div>
+        <%- include ../base/importJS2.ejs %>
+        <%- include ../base/baseJS.ejs %>
+        <script type="text/html" id="listtemplate">
+         {{each posts as item i}}
+            <div class="chapter">
+              <h2 id={{item.postID}}><a href="#?" title="">{{item.title}}</a></h2>
+              <p>{{item.text}}</p>
+              <div class="chapter-info">
+                  <span><a href="#?" title="">{{item.nickname}}</a></span>
+                  <span>发表于</span>
+                  <span><a href="" title="">{{item.groupName}}</a></span>
+                  <span class="cha-time">{{item.createTime}}</span>
+              </div>
+            </div>
+          {{/each}}
+        </script>
+        <script>
+            var planetDetail = {
+              pre: $(".page-turn").find('a').first(),
+              next: $(".page-turn").find('a').last(),
+              page: $(".page-turn").find('span').eq(1),
+              main: $(".chapter-col"),
+              joinBtn: $("#joinBtn"),
+              loading: $(".loading"),
+              isjoin:0,
+              currentpage: 1,
+              pageCount: 0,
+              ClientData: function() {
+                this.currentpage = <%=currentPage%>;
+                this.pageCount = <%=pageCount%>;
+              },
+              getServerData: function(param, cb) {
+                $.getJSON("/api/getGroupPlanetShow", param,
+                  function(data) {
+                    cb(data);
+                });
+              },
+              getJoinPData: function(param, cb){
+                $.getJSON("/api/joinPlant", param,
+                  function(data) {
+                    cb(data);
+                });
+              },
+              getJoinBtnVal:function(param, cb){
+                $.getJSON("/api/isJoinP", param,
+                  function(data) {
+                    cb(data);
+                });
+              },
+              bindEvent: function() {
+                var self = this;
+                self.getJoinBtnVal({
+                  groupid: <%=posts[0].groupID%>,
+                  userid: localStorage.getItem("userID")
+                },function(data){
+                  if (data.ret ==200 && data.data) {
+                    if (data.data.code == 1) {
+                      self.joinBtn.text('+发帖');
+                      self.isjoin = 1;//已加入
+                    }
+                    if(data.data.code == 0){
+                      self.joinBtn.text('+加入');
+                      self.isjoin = 0;//未加入
+                    }
+                  }
+                });
+                self.pre.on('click', function() {
+                  if (self.currentpage == 1) {
+                    sweetAlert('错误', '当前页是第一页', 'error');
+                  } else {
+                    self.loading.show();
+                    self.getServerData({
+                      currentpage: self.currentpage - 1,
+                      groupid: <%=posts[0].groupID%>
+                    }, function(data) {
+                      if (data.ret == 200 && data.data && data.data.posts.length > 0) {
+                          self.currentpage -= 1;
+                          var compiled = template("listtemplate", data.data);
+                          self.main.html(compiled);
+                          self.page.text(data.data.currentPage + '/' + data.data.pageCount);
+                          self.loading.hide();
+                      }
+                    });
+                  }
+                });
+                self.next.on('click', function() {
+                    if (self.currentpage == self.pageCount) {
+                        sweetAlert('错误', '当前页是最后一页', 'error');
+                    } else {
+                      self.loading.show();
+                      self.getServerData({
+                      currentpage: self.currentpage + 1,
+                      groupid: <%=posts[0].groupID%>
+                      }, function(data) {
+                          if (data.ret == 200 && data.data && data.data.posts.length > 0) {
+                            self.currentpage += 1;
+                            var compiled = template("listtemplate", data.data);
+                            self.main.html(compiled);
+                            self.page.text(data.data.currentPage + '/' + data.data.pageCount);
+                            self.loading.hide();
+                          }
+                        });
+                    }
+                });
+                self.joinBtn.on('click',function(event){
+                  event.preventDefault();
+                  if (self.isjoin == 0) {
+                    self.getJoinPData({
+                      groupid: <%=posts[0].groupID%>,
+                      userid: localStorage.getItem("userID")
+                    },function(data){
+                      console.log(data);
+                      if (data.ret == 200 && data.data && data.data.code == 1) {
+                        self.joinBtn.text('发帖');//加入成功
+                      }
+                    });
+                  }
+                  if(self.isjoin == 1){
+                    window.location.href = '/post';
+                  }
+                })
+              },
+              init: function() {
+                this.ClientData();
+                this.bindEvent();
+              }
+            }
+            planetDetail.init();
+        </script>
+        <%- include ../base/footer.ejs %>

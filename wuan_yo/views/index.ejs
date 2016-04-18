@@ -1,4 +1,6 @@
 <%- include base/header.ejs %>
+<%- include base/indexHeader.ejs %>
+<%- include base/navbar.ejs %>
 	<div class="main">
 		<div class="location clearfix">
 			<h1><a href="" title="">首页</a></h1>
@@ -6,18 +8,16 @@
 		<div class="chapter-col">
 			<% posts.forEach(function(item) { %>
 				<div class="chapter">
-					<h2><a href="#?" title=""><%=item.title%></a></h2>
-					<p>
-						<%=item.text%>
-					</p>
+					<h2><a href="/postDetail/<%=item.postID%>" title=""><%=item.title%></a></h2>
+					<p><%=item.text%></p>
 					<div class="chapter-info">
 						<span><a href="#?" title=""><%=item.nickname%></a></span>
 						<span>发表于</span>
-						<span><a href="" title=""><%=item.groupName%></a></span>
+						<span><a href="/planetDetail/<%=item.groupID%>" title=""><%=item.groupName%></a></span>
 						<span class="cha-time"><%=item.createTime%></span>
 					</div>
 				</div>
-				<% }); %>
+			<% }); %>
 
 		</div>
 		<div class="page-turn">
@@ -26,18 +26,17 @@
 			<span><a href="#?" title="">下一页</a></span>
 		</div>
 	</div>
+	<%- include base/importJS.ejs %>
 	<%- include base/baseJS.ejs %>
 	    <script type="text/html" id="listtemplate">
 	    	 {{each posts as item i}}
         			<div class="chapter">
-					<h2><a href="#?" title="">{{item.title}}</a></h2>
-					<p>
-						{{item.text}}
-					</p>
+					<h2><a href="/postDetail/{{item.postID}}" title="">{{item.title}}</a></h2>
+					<p>{{item.text}}</p>
 					<div class="chapter-info">
 						<span><a href="#?" title="">{{item.nickname}}</a></span>
 						<span>发表于</span>
-						<span><a href="" title="">{{item.groupName}}</a></span>
+						<span><a href="/planetDetail/{{item.groupID}}" title="">{{item.groupName}}</a></span>
 						<span class="cha-time">{{item.createTime}}</span>
 					</div>
 				</div>
@@ -64,6 +63,7 @@
 				next: $(".page-turn").find('a').last(),
 				page: $(".page-turn").find('span').eq(1),
 				main: $(".chapter-col"),
+				nav_home: $(".navbar-option").find('.navbar-option-item').eq(0),
 				loading: $(".loading"),
 				currentpage: 1,
 				pageCount: 0,
@@ -71,6 +71,9 @@
 					this.currentpage = <%=currentPage%>;
 					this.pageCount = <%=pageCount%>;
 				},
+				navActive:function(){
+                    this.nav_home.addClass("navbar-active");
+                },
 				getServerData: function(param, cb) {
 					$.getJSON("api/getindex", param,
 						function(data) {
@@ -119,6 +122,7 @@
 				init: function() {
 					this.ClientData();
 					this.bindEvent();
+					this.navActive();
 				}
 			}
 			index.init();

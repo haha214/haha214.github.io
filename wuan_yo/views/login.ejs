@@ -1,4 +1,6 @@
 <%- include base/header.ejs %>
+<%- include base/loginH.ejs %>
+<%- include base/navbar.ejs %>
 	<div class="main">
 		<div class="login">
 			<form class="login-form line-form" action="/login" title="" method="post">
@@ -14,6 +16,7 @@
 			</form>
 		</div>
 	</div>
+	<%- include base/importJS.ejs %>
 	<%- include base/baseJS.ejs %>
 		<script type="text/javascript">
 			var login = {
@@ -50,7 +53,9 @@
 									if (data.data.code == 0 && data.data.msg) {
 										sweetAlert('提示', data.data.msg, 'warning');
 									} else {
-										window.location.href = '/myPlant';
+										window.location.href = '/';
+										localStorage.setItem("userName",data.data.info.nickname);
+										localStorage.setItem("userID",data.data.info.userID);
 									}
 								},
 								error: function(x, h, r) {

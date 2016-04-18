@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+// var session = require('express-session');
+// var RedisStore = require('connect-redis')(session);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -11,6 +13,15 @@ var page = require('./routes/page');
 var api = require('./routes/api');
 var login = require('./routes/login');
 var register = require('./routes/register');
+var createPlanet = require('./routes/createPlanet');
+var post = require('./routes/post');
+var postDetail = require('./routes/postDetail');
+var postEdit = require('./routes/postEdit');
+var planetDetail = require('./routes/planetDetail');
+var planetAll = require('./routes/planetAll');
+var myPlanet = require('./routes/myPlanet');
+var logout = require('./routes/logout');
+var isLogin = require('./routes/isLogin');
 
 var app = express();
 
@@ -25,15 +36,53 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
+
+// var options = {
+//   "host": "50.30.35.9",
+//   "port": "3510",
+//   "ttl": 60 * 60 * 24 * 30,   //Session的有效期为30天
+// };
+
+// // 此时req对象还没有session这个属性
+// app.use(session({
+//   store: new RedisStore(options),
+//   secret: 'wuan is powerful'
+// }));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+app.use('/api/', api);
+// 路由入口的拦截，进行登陆的判定
+// app.use(function(req, res, next) {
+// 	var url = req.originalUrl;
+// 	console.log("url", url);
+// 	var UnAuthUrl = ["/login", "/", "/api/getIndex"];
+// 	if (UnAuthUrl.indexOf(url) == -1 && !req.session.user) {
+// 		return res.redirect("/login");
+// 	}
+// 	next();
+// });
+
+
+
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/pages', page);
-app.use('/api/', api);
 app.use('/login', login);
 app.use('/register',register);
+app.use('/createPlanet', createPlanet);
+app.use('/myPlanet', myPlanet);
+app.use('/Post', post);
+app.use('/PostDetail', postDetail);
+app.use('/PostEdit', postEdit);
+app.use('/planetDetail', planetDetail);
+app.use('/planetAll', planetAll);
+app.use('/logout',logout);
+app.use('/isLogin',isLogin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

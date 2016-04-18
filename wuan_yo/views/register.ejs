@@ -1,4 +1,6 @@
 <%- include base/header.ejs %>
+<%- include base/registerH.ejs %>
+<%- include base/navbar.ejs %>
     <div class="main">
         <div class="login">
             <form class="login-form line-form" action="/register" title="" method="post">
@@ -18,6 +20,7 @@
             </form>
         </div>
     </div>
+    <%- include base/importJS.ejs %>
     <%- include base/baseJS.ejs %>
         <script type="text/javascript">
             var register = {
@@ -27,8 +30,13 @@
                 loginform: $(".login-form"),
                 verificate: function() {
                     var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-                    if (this.nickname.val().length == 0) {
-                        sweetAlert('格式错误', '昵称不能为空！', 'warning');
+                    var myregName = /^[0-9a-zA-Z\u4E00-\u9FA5\_]*$/;
+                    if (this.nickname.val().length == 0 || this.nickname.val().length>20) {
+                        sweetAlert('格式错误', '请输入1-20位字符做为昵称！', 'warning');
+                        return false;
+                    }
+                    if (!myregName.test(this.nickname.val())){
+                        sweetAlert('格式错误', '只允许中文、数字、字母和下划线！', 'warning');
                         return false;
                     }
                     if (!myreg.test(this.email.val())) {
@@ -37,6 +45,10 @@
                     }
                     if (this.pw.val().length == 0) {
                         sweetAlert('格式错误', '请填写密码！', 'warning');
+                        return false;
+                    }
+                    if (this.pw.val().length<8 || this.pw.val().length>20){
+                        sweetAlert('格式错误', '请填写8-20位密码', 'warning');
                         return false;
                     }
                     return true;
@@ -60,8 +72,9 @@
                                     if (data.data.code == 0 && data.data.msg) {
                                         sweetAlert('提示', data.data.msg, 'warning');
                                     } else {
-                                        window.location.href = '/register';
-                                        localStorage.setItem("user",data.data.info.nickname);
+                                        window.location.href = '/';
+                                        localStorage.setItem("userName",data.data.info.nickname);
+                                        localStorage.setItem("userID",data.data.info.userID);
                                     }
                                 },
                                 error: function(x, h, r) {
