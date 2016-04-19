@@ -9,7 +9,7 @@
         <meta content="telephone=no,email=no" name="format-detection">
         <script src="lib-flexible-master/build/flexible_css.debug.js"></script>
         <script src="lib-flexible-master/build/flexible.debug.js"></script>
-        <link rel="stylesheet" type="text/css" href="dist/css/wangEditor.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="dist/css/wangEditor.min.css"> -->
         <link rel="stylesheet" type="text/css" href="dist-mobile/css/wangEditor-mobile.min.css">
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <link rel="stylesheet" type="text/css" href="css/posts.css">
@@ -54,20 +54,20 @@
                         <li><button type="button" class="em-btn"></button></li>
                         <li><button type="button" class="em-btn"></button></li>
                     </ul> -->
-                    <textarea name="" class="form-control" id="textarea1">
+                   <!--  <textarea name="" class="form-control" id="textarea1">
                         <p>内容</p>
-                    </textarea>
-
-                    <!-- <textarea id="textarea_mobile" style="width:100%;height:6.712963rem;">
-                        <p>内容mobile</p>
                     </textarea> -->
+                    
+                    <textarea id="textarea-mobile" style="width:100%;height:6.712963rem;">
+                        <p>内容mobile</p>
+                    </textarea>
                     <button type="submit" class="post-sub">发表</button>
                 </form>  
             </div>
         </div>
     </div>
 
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+       <!--  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="dist/js/wangEditor.min.js"></script>
         <script type="text/javascript">
             var editor = new wangEditor("textarea1");
@@ -82,13 +82,16 @@
                   /* Act on the event */
                   $(".wangEditor-container").removeClass('textarea-focus');
               });
-        </script>
-<!--         <script type="text/javascript">
-            $(function(){
-                var editorM = new ___E("textarea_mobile");
-                editorM.init();
-            });
         </script> -->
+        <script type="text/javascript" src="dist-mobile/js/lib/zepto.js"></script>
+        <script type="text/javascript" src="dist-mobile/js/lib/zepto.touch.js"></script>
+        <script type="text/javascript" src="dist-mobile/js/wangEditor-mobile.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                var editor_mobile = new ___E("textarea-mobile");
+                editor_mobile.init();
+            });
+        </script>
         <script type="text/javascript">
             var setMinHeight = function(){
                 var mainMinHeight;
