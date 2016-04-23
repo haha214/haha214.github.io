@@ -101,9 +101,12 @@
             }
             $(document).ready(function() {
                 setMinHeight();
-                $(".navbar-toggle").tap(function(event) {
-                    /* Act on the event */
-                    $(".all-wrapper").toggleClass('sidebar-extend');  
+                // $(".navbar-toggle").tap(function(event) {
+                //     /* Act on the event */
+                //     $(".all-wrapper").toggleClass('sidebar-extend');  
+                // });
+                $(".navbar-toggle").on("touchend",function(event){
+                    $(".all-wrapper").toggleClass('sidebar-extend'); 
                 });
                 $(window).resize(function(event){
                     setMinHeight();
