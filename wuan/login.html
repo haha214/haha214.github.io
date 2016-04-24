@@ -59,9 +59,6 @@
                 </form>
             </div>
         </div>
-        <script>
-            document.getElementsByClassName("main")[0].style.minHeight = window.innerHeight + "px";
-        </script>
     </div>
 
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
@@ -79,11 +76,19 @@
                 setMinHeight();
                 $(".navbar-toggle").click(function(event) {
                     /* Act on the event */
-                    $(".all-wrapper").toggleClass('sidebar-extend');  
+                    $(".all-wrapper").toggleClass('sidebar-extend'); 
+                    if ($(".all-wrapper").hasClass('sidebar-extend')) {
+                        console.log("true");
+                      $(".main").click(function(event) {
+                        /* Act on the event */
+                      $(".all-wrapper").removeClass('sidebar-extend');
+                   });
+                  } 
                 });
                 $(window).resize(function(event){
                     setMinHeight();
                 });
+
             });
         </script>
     </body>
