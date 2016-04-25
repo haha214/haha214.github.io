@@ -321,6 +321,9 @@ span.navbar-account-item{
     width:100%;
    /* overflow:auto;*/
 }
+.main-page{
+    padding-bottom: 1.435185rem;
+}
 /*折叠状态*/
 .sidebar-extend .main{
     left:5.555556rem; 
@@ -358,8 +361,11 @@ span.navbar-account-item{
     .main{
         width:750px;
         margin:0 auto;
-        padding: 0;
-        left:0 !important;
+        padding: 0 ;
+        left:0 !important;   
+    }
+    .main-page{
+        padding-bottom: 70px;
     }
     .main-top{
         display:none!important;
@@ -412,12 +418,19 @@ span.navbar-account-item{
     color:#949494;
     text-align: center;
     padding:0.138889rem 0 0.601852rem;
+    height:1.435185rem;
 }
 .page-turn>span{
     margin:0 0.324074rem;
 }
 .page-turn a{
     color:#5ab8fe;
+}
+.main-page>.page-turn{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    left:0;
 }
 @media (min-width:768px){
     .page-turn{
@@ -427,13 +440,26 @@ span.navbar-account-item{
     .page-turn>span{
         margin:0 20px;
     }
-    .no-pape .page-turn{
-        display:none;
-    }
+    
 }
 @media (min-width:768px){
     .col-sm-4{
         width:33.33333333%;
         float:left;
     }
+}
+/*空白页*/
+.emptyPage{
+    color:#cccccc;
+    font-size: 0.333333rem;
+    text-align: center;
+    padding:3.703704rem 0;
+    margin:0;
+}
+@media (min-width:768px){
+    .emptyPage{
+        font-size: 20px;
+        padding:160px 0 300px;
+    }
+    
 }
