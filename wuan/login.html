@@ -88,6 +88,12 @@
                 $(window).resize(function(event){
                     setMinHeight();
                 });
+                $("input").focus(function(event){
+                    $(".navbar-header").css("position","absolute");
+                });
+                $("input").blur(function(event){
+                    $(".navbar-header").css("position","fixed");
+                });
 
             });
         </script>
