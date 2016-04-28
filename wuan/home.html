@@ -199,7 +199,9 @@
     </div>
         
 
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> -->
+        <script src="js/zepto.min.js"></script>
+        <script src="js/zepto.touch.js"></script>
         <script type="text/javascript">
             var setMinHeight = function(){
                 var mainMinHeight;
@@ -212,9 +214,14 @@
             }
             $(document).ready(function() {
                 setMinHeight();
-                $(".navbar-toggle").click(function(event) {
-                    /* Act on the event */
-                    $(".all-wrapper").toggleClass('sidebar-extend');  
+                // $(".navbar-toggle").click(function(event) {
+                //     /* Act on the event */
+                //     $(".all-wrapper").toggleClass('sidebar-extend');  
+                // });
+                $(".navbar-toggle").on('click', function(event) {
+                  event.preventDefault();
+                  /* Act on the event */
+                   $(".all-wrapper").toggleClass('sidebar-extend');  
                 });
                 $(window).resize(function(event){
                     setMinHeight();
