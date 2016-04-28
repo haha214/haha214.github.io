@@ -1,12 +1,7 @@
 .login{
     width:7.066667rem;
     margin: 0 auto ;
-    position: absolute;
-    top:50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left:0;
-    right:0;
+    padding:3.055556rem 0;
 }
 .login-group{
     padding-bottom: 0.2rem;
@@ -43,6 +38,7 @@
 @media (min-width:768px){
     .login{
         width:325px;
+        padding:200px 0;
     }
     .login-group{
         margin-bottom: 20px;
