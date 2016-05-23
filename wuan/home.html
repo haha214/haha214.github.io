@@ -229,7 +229,21 @@
             $(".uil-default-css").attr('style', 'transform: scale(0.3);margin-top:' + centerheight + ';margin-left: ' + centerwidth + ';');
           };
           setCenterLoadingDiv();
-          // $(".loading").show();
+          $(".loading").show();
+          //设置登录时页面状态
+          var setLoginStatus = function() {
+            $("#nav-login,#nav-register").addClass('nav-anone');
+            $("#nav-userId,#nav-logout").removeClass('nav-anone');
+            $("#nav-userId").children("span").text(userName);
+            $("#nav-myP").children("a").attr("href", "/myPlanet/" + localStorage.getItem("userID"));
+          };
+          //设置注销时页面状态
+          var setLogoutStatus = function() {
+            $("#nav-login,#nav-register").removeClass('nav-anone');
+            $("#nav-userId,#nav-logout").addClass('nav-anone');
+            $("#nav-userId").children("span").text("");
+            $("#nav-myP").children("a").attr("href", "/login");
+          }
         </script>
         <script type="text/javascript">
             var setMinHeight = function(){
