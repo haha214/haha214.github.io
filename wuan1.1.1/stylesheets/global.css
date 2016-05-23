@@ -177,10 +177,7 @@ span.navbar-account-item{
     width:100%;
     left:0;
 }
-.col-sm-4{
-    width:33.33333333%;
-    float:left;
-}
+
 /***************
 *******空白页****
 *****************/
@@ -188,7 +185,7 @@ span.navbar-account-item{
     color:#cccccc;
     text-align: center;
     font-size: 20px;
-    padding:160px 0 300px;
+    padding:160px 0 ;
     margin:0;
 }
 /****************
@@ -315,60 +312,41 @@ span.navbar-account-item{
     text-overflow: ellipsis;
 }
 .planet{
-    margin-bottom: 0.953704rem;
+    margin:48px 0 86px;
+}
+.planet>ul{
+    margin-right: -20px;
+    margin-left: -20px;
+}
+.col-sm-4{
+    width:33.33333333%;
+    float:left;
 }
 .planet-item{
-    padding:0.231481rem 0 0.231481rem 0.555556rem;
+    padding:10px 20px;
 }
 .planet-pic{
-    margin-right: 0.62037rem;
+    margin-right: 18px;
     float:left;
 }
 .planet-pic img{
-    width:1.481481rem;
-    height:1.481481rem;
-}
-.planet-info{
-    color:#bbbbbb;
-    font-size: 0.37037rem;
-}
-.planet-info:before{
-    content:"";
-    display:table;
+    width:60px;
+    height:60px;
 }
 .planet-info h2{
-    font-size: 0.462963rem;
-    margin-top: 0.074074rem;
+    font-size: 20px;
+    margin-bottom: 2px;
+    color:#5ab8fe; /*省略号也可以有颜色*/
 }
 .planet-info a{
     color:#5ab8fe;    
 }
-@media (min-width:768px){
-    
-    .planet>ul{
-        margin-right: -20px;
-        margin-left: -20px;
-    }
-    .planet-item{
-        padding:10px 20px;
-    }
-    .planet-pic{
-        margin-right: 18px;
-    }
-    .planet-pic img{
-        width:60px;
-        height:60px;
-    }
-    .planet-info{
-        font-size: 16px;
-    }
-    .planet-info h2{
-        font-size: 20px;
-        margin-top: 3.5px;
-    }
-    .planet{
-        margin:48px 0 86px;
-    }
+.planet-info p{
+    color:#bbbbbb;
+    font-size: 12px;
+    line-height: 14px;
+    height:28px;
+    overflow: hidden;
 }
 /************************
 登陆注册及创建星球底线表单
