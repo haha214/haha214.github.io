@@ -1,0 +1,798 @@
+
+html,body{
+    height:100%;
+}
+body{
+    font-family: 'Microsoft YaHei',sans-serif;
+    line-height: 1.5;
+    margin:0;
+}
+button{
+    outline: none;
+    border:none; 
+}
+input,textarea,button{
+   font-family: 'Microsoft YaHei',sans-serif; 
+}
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,p,ul,li{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+:before,:after{
+    box-sizing: border-box;
+}
+.clearfix:before,.clearfix:after,.container:before,.container:after,.row:before,.row:after,.navbar:before,.navbar:after,.main:before,.main:after{
+    display:table;
+    content: "";
+}
+.clearfix:after,.row:after,.container:after,.navbar:after{
+    clear:both;
+}
+.all-wrapper{
+    position: relative;
+    height:100%;
+}
+/****************************
+***********导航栏***********
+****************************/
+.navbar{
+    position: fixed;
+    width:100%;
+    min-width: 900px;
+    top:0;
+    left:0;
+    height:auto;
+    background-color: #5ab8fe;
+    color:#fff;
+    text-align: center;
+    z-index: 1;
+}
+.navbar a{
+    color:#fff;
+}
+/*导航标题*/
+.navbar-title{
+    font-size: 30px;
+    padding:7.5px 0 7.5px 140px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+/*导航选项*/
+.navbar-option{
+    padding:10px 0 ;
+    text-align: center;
+}
+.navbar-option>li{
+    display:inline-block;
+    margin:0 26px;
+    font-size: 22px;
+}
+.navbar-option-item{
+    display:inline-block;
+    padding:3.5px 10px;
+    border-radius: 5px 5px ;
+}
+.navbar-active{
+    background-color: #8acdff;
+} 
+
+/*导航账户*/
+.navbar-account{
+    position: absolute;
+    right:35px;
+    top:0;
+    bottom:0;
+}
+.navbar-account>li{
+    float:left;
+    font-size: 18px;
+}
+.navbar-account-item{
+    display:inline-block;
+    padding:16.5px 15px ;
+}
+span.navbar-account-item{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nav-anone{
+    display:none;
+}
+.nav-ahidden{
+    visibility: hidden;
+}
+
+/*************************
+**********主栏*****
+***************************/
+.main{
+    position: relative;
+    width:750px;
+    min-height:100%;
+    padding-top: 60px;
+    margin:0 auto;
+}
+.main-page{
+    position: relative;
+    padding-bottom: 70px;
+}
+/********************
+*********当前位置***
+*******************/
+.location{
+    padding:25px 0 8px;
+}
+.location>h1{
+    float: left; 
+    font-size: 30px;
+    line-height: 35px;
+}
+.location>h1>a{
+   color:#5ab8fe; 
+}
+.location>a{
+    display:inline-block;
+    font-size: 18px;
+    padding:4px 27px; 
+    float:right;
+    border-radius: 4px;
+    color:#f6fafb;
+    background-color: #5ab8fe; 
+}
+
+/******************
+********翻页模块***
+*******************/
+.page-turn{
+    font-size: 16px;
+    padding:23px 0;
+    color:#949494;
+    text-align: center;
+}
+.page-turn>span{
+    margin:0 20px;
+}
+.page-turn a{
+    color:#5ab8fe;
+}
+.main-page>.page-turn{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    left:0;
+}
+.col-sm-4{
+    width:33.33333333%;
+    float:left;
+}
+/***************
+*******空白页****
+*****************/
+.emptyPage{
+    color:#cccccc;
+    text-align: center;
+    font-size: 20px;
+    padding:160px 0 300px;
+    margin:0;
+}
+/****************
+*********文章*****
+******************/
+.chapter{
+    padding:17px 0 7px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.chapter>h2{
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.chapter>h2>a{
+    color:#5ab8fe;
+}
+/*列表正文*/
+.chapter-text{
+    font-size: 14px;
+    color:#5c5c5c;
+    margin-bottom: 9px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    /*white-space: pre-wrap;*/
+}
+/*列表图片*/
+.chapter-img{
+    position: relative;
+    margin-bottom: 10px;
+}
+.chapter-img img{
+    width:100px;
+    height:100px;
+    float:left;
+    margin-right: 35px;
+}
+
+/*列表信息*/
+.chapter-info{
+    font-size: 12px;
+    color:#999999;
+}
+.chapter-info a{
+    color:#999999;
+}
+.cha-time{
+    float:right;
+}
+
+/********************
+****创建星球**********
+**********************/
+.create-p{
+    padding:1.712963rem 0 6.666667rem;
+}
+.create-p>h2{
+    font-size:0.555556rem;
+    margin-bottom: 2.685185rem;
+    color:#5ab8fe;
+}
+.cp-form{
+    width:7.037037rem;
+    margin:0 auto;
+}
+.cp-group{
+    padding-bottom: 0.12963rem;
+    margin-bottom: 2.5rem;
+}
+.cp-label{
+    width:0.611111rem;
+    height:0.611111rem;
+    background:url(../images/cp_03.png); 
+}
+.cp-input{
+    font-size: 0.37037rem;
+    line-height: 0.611111rem;
+    height:0.611111rem;
+    padding-left: 0.814815rem;
+}
+.cp-sub{
+    font-size: 0.462963rem;
+    line-height: 1.5;
+    padding:0.12037rem 0;
+}
+@media (min-width:768px){
+    .create-p{
+        padding:20px 0 330px;
+    }
+    .cp-form{
+        width:290px;
+    }
+    .create-p>h2{
+        font-size: 30px;
+        margin-bottom: 200px;
+    }
+    .cp-group{
+        padding-bottom: 4px;
+        margin-bottom: 57px;
+    }
+    .cp-label{
+        width:36px;
+        height:36px;
+    }
+    .cp-input{
+        font-size: 17px;
+        line-height: 36px;
+        padding-left: 50px;
+        height:36px;
+    }
+    .cp-sub{
+        font-size: 21px;
+        padding:5px 0;
+        border-radius: 8px 7px;
+    }
+}
+/*************************
+*********全部星球********
+************************/
+/*星球单条选项*/
+.text-ellipsis{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.planet{
+    margin-bottom: 0.953704rem;
+}
+.planet-item{
+    padding:0.231481rem 0 0.231481rem 0.555556rem;
+}
+.planet-pic{
+    margin-right: 0.62037rem;
+    float:left;
+}
+.planet-pic img{
+    width:1.481481rem;
+    height:1.481481rem;
+}
+.planet-info{
+    color:#bbbbbb;
+    font-size: 0.37037rem;
+}
+.planet-info:before{
+    content:"";
+    display:table;
+}
+.planet-info h2{
+    font-size: 0.462963rem;
+    margin-top: 0.074074rem;
+}
+.planet-info a{
+    color:#5ab8fe;    
+}
+@media (min-width:768px){
+    
+    .planet>ul{
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    .planet-item{
+        padding:10px 20px;
+    }
+    .planet-pic{
+        margin-right: 18px;
+    }
+    .planet-pic img{
+        width:60px;
+        height:60px;
+    }
+    .planet-info{
+        font-size: 16px;
+    }
+    .planet-info h2{
+        font-size: 20px;
+        margin-top: 3.5px;
+    }
+    .planet{
+        margin:48px 0 86px;
+    }
+}
+/************************
+登陆注册及创建星球底线表单
+*************************/
+.line-form .line-fgroup{
+    position: relative;
+    border-bottom: 1px solid #5ab8fe;
+}
+[data-dpr="2"] .line-form .line-fgroup{
+    border-bottom-width: 2px;
+}
+[data-dpr="3"] .line-form .line-fgroup{
+    border-bottom-width: 3px;
+}
+.line-form label{
+    display:inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    cursor:pointer;
+}
+.line-form input{
+    border:none;
+    width:100%;
+    background-color: transparent;
+    color:#b4b4b4;
+}
+.line-form button[type="submit"]{
+    width:100%;
+    background-color: #5ab8fe;
+    color:#f6fafb;
+    border-radius: 5px;
+    cursor:pointer;
+}
+[data-dpr="2"] .line-form button[type="submit"]{
+    border-radius: 10px;
+}
+[data-dpr="3"] .line-form button[type="submit"]{
+    border-radius: 15px;
+}
+/*******************
+******登陆和注册***********
+******************/
+.login{
+    width:7.066667rem;
+    margin: 0 auto ;
+    padding:3.055556rem 0;
+}
+.login-group{
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.466667rem;
+}
+
+.login-label{
+    width:0.64rem;
+    height:0.64rem;
+}
+.lable-name{
+    background-image: url(../images/login_01.png);
+}
+.lable-e{
+    background-image: url(../images/login_03.png);
+}
+.label-paw{
+    background-image: url(../images/login_06.png);
+}
+
+.login-input{
+    font-size: 0.373333rem;
+    line-height: 0.64rem;
+    height:0.64rem;
+    padding-left: 1.12rem;   
+}
+
+.login-sub{  
+    font-size: 0.466667rem;
+    line-height: 1.2;
+    padding:0.186667rem 0 ;
+    margin-top: 0.773333rem;
+}
+
+@media (min-width:768px){
+    .login{
+        width:325px;
+        padding:200px 0;
+    }
+    .login-group{
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+    }
+    .login-label{
+        width:36px;
+        height:36px;
+    }
+    .login-input{
+        font-size: 17px;
+        line-height: 36px;
+        height:36px;
+        padding-left: 51px;
+    }
+    .login-sub{
+        font-size: 21px;
+        padding:8.5px 0;
+        border-radius: 7px;
+        margin-top: 35px;
+    }
+}
+/*******************
+帖子详情
+*******************/
+.post-detail{
+    padding:0.25rem 0 0.833333rem;
+}
+/*帖子内容模块*/
+.post-md{
+    margin-bottom: 0.296296rem;
+}
+.post-title{
+    font-size: 0.555556rem;
+    color: #363636;
+    margin-bottom: 0.185185rem;
+}
+.post-info{
+    font-size: 0.333333rem;
+    color:#a7a7a7;
+    margin-bottom: 0.37037rem;
+}
+.post-info a{
+    color:#a7a7a7;
+}
+.post-time{
+    float: right;
+}
+.post-content{
+    word-wrap: break-word;
+    /*white-space: pre-wrap;*/
+    font-size: 0.37037rem;
+    color:#5c5c5c;
+    /*padding: 0 0.277778rem 0.898148rem;*/
+    margin-bottom: 0.898148rem;
+}
+.post-opt{
+    font-size: 0.425926rem;
+    margin-right: -0.166667rem;
+    margin-left: -0.166667rem;
+    text-align: right;
+}
+.post-opt-item{
+    color:#5ab8fe;
+    display: inline-block;
+    padding:0 0.166667rem;
+}
+/*帖子回复*/
+.post-comment{
+    margin-bottom: 0.462963rem;
+}
+.post-comment>h2{
+    color:#a7a7a7;
+    font-size: 0.462963rem;
+    line-height: 1.2;
+    margin-bottom: 0.203704rem;
+}
+/*单条回复*/
+.post-cm-item{
+    padding:0.333333rem 0 0.222222rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+[data-dpr="2"] .post-cm-item{
+    border-bottom-width: 2px;
+}
+[data-dpr="3"] .post-cm-item{
+    border-bottom-width: 3px;
+}
+/*回复信息*/
+.post-cm-info{
+    font-size: 0.37037rem;
+    color:#363636;
+    margin-bottom: 0.046296rem;
+}
+.post-cm-info a{
+    color:#363636;
+}
+.post-cm-time{
+    float:right;
+}
+/*回复内容*/
+.post-cm-content{
+    font-size: 0.37037rem;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color:#5b5b5b;
+}
+/*回复内容的翻页*/
+.post-comment .page-turn{
+    padding:0.37037rem 0 0;
+    text-align: right;
+    font-size: 0.425926rem;
+}
+/*我的回复*/
+.my-comment{
+    
+}
+.my-comment>h2{
+    color:#5ab8fe;
+    font-size: 0.555556rem;
+    margin-bottom: 0.231481rem;
+}
+/*表单*/
+.post-detail-form textarea{
+    margin-bottom: 1.157407rem;
+    height:3.472222rem;
+}
+
+@media (min-width:768px){
+    .post-detail{
+        padding:22px 0 93px;
+    }
+    /*帖子内容模块*/
+    .post-md{
+        margin-bottom: 68px;
+    }
+    .post-title{
+        font-size:24px;
+        margin-bottom: 0;
+    }
+    .post-info{
+        font-size: 12px;
+        margin-bottom: 9px;
+    }
+    .post-content{
+        font-size: 14px;
+        margin-bottom: 23px;
+    }
+    .post-opt{
+        font-size: 18px;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    .post-opt-item{
+        padding:0 5px;
+    }
+    /*帖子回复*/
+    .post-comment{
+        margin-bottom: 20px;
+    }
+    .post-comment>h2{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .post-cm-item{
+        padding:13px 0 4px;
+    }
+    .post-cm-info{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .post-cm-content{
+        font-size: 12px;
+    }
+    /*帖子回复翻页*/
+    .post-comment .page-turn{
+        padding:10px 0 0;
+        font-size: 16px;
+    }
+    /*我的回复*/
+    .my-comment{
+    
+    }
+    .my-comment>h2{
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    /*表单*/
+    .post-detail-form textarea{
+        margin-bottom: 20px;
+        height:161px;
+    }
+}
+/******************
+创建及编辑帖子
+******************/
+.post>h2{
+    font-size: 0.555556rem;
+    color:#5ab8fe;
+    margin-bottom:1.296296rem;
+}
+
+.post-form input{
+    margin-bottom: 0.509259rem;
+}
+.post-form textarea{
+    height:6.712963rem;
+    margin-bottom: 1.574074rem;
+}
+.post{
+    padding:1.685185rem 0 1.666667rem;
+}
+
+@media (min-width:768px){
+    .post>h2{
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+    
+    .post-form input{
+        margin-bottom: 30px;
+    }
+    .post-form textarea{
+        height:360px;
+        margin-bottom:20px ;
+    }
+    .post{
+        padding:0;
+        margin:21px 0 93px;
+    }
+}
+/*帖子表单*/
+.form-control{
+    display:block;
+    width:100%;
+    font-size:0.37037rem ;
+    line-height: 1.5;
+    padding:0.148148rem 0.277778rem;
+    color:#b4b4b4;
+    background-color: #f6fafb;
+    border:1px solid #ccc;
+    border-radius: 8px 7px;
+}
+[data-dpr="2"] .form-control{
+    border-width: 2px;
+    border-radius: 16px 14px;
+}
+[data-dpr="3"] .form-control{
+    border-width: 3px;
+    border-radius: 24px 21px;
+}
+.form-control:focus{
+    border-color: #5ab8fe;
+    outline:0;
+    box-shadow: inset 0 0 2px 1px #5ab8fe,0 0 2px  #5ab8fe;
+}
+[data-dpr="2"] .form-control:focus{
+    box-shadow: inset 0 0 4px 2px #5ab8fe,0 0 4px  #5ab8fe;
+}
+[data-dpr="3"] .form-control:focus{
+    box-shadow: inset 0 0 6px 4px #5ab8fe,0 0 6px  #5ab8fe;
+}
+.post-sub{
+    width:100%;
+    background-color: #5ab8fe;
+    color:#f6fafb;
+    border-radius: 9px 8px;
+    font-size: 0.462963rem;
+    line-height: 1.5;
+    padding:0.138889rem 0;
+    cursor:pointer;
+}
+[data-dpr="2"] .post-sub{
+    border-radius: 18px 16px;
+}
+[data-dpr="3"] .post-sub{
+    border-radius: 27px 24px;
+}
+textarea.form-control{
+    resize: none;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+@media (min-width:768px){
+    .form-control{
+        font-size: 14px;
+        line-height: 1.5;
+        padding:7px 10px;
+        border-radius: 10px ;
+    }
+    .post-sub{
+        width:auto;
+        border-radius: 4px;
+        font-size: 17px;
+        line-height: 1.5;
+        padding:5px 25px;
+        float:right;
+    }
+
+}
+/*移动文本编辑器*/
+.post-form .wangEditor-mobile-container{
+    height:6.712963rem;
+    border:1px solid #ccc;
+    border-radius: 8px 7px;
+    margin-bottom: 1.574074rem;
+    font-size: 0.37037rem;
+}
+[data-dpr="2"] .post-form .wangEditor-mobile-container{
+    border-width: 2px;
+    border-radius: 16px 14px;
+}
+[data-dpr="3"] .post-form .wangEditor-mobile-container{
+    border-width: 3px;
+    border-radius: 24px 21px;
+}
+/*PC文本编辑器*/
+.post-form .wangEditor-container{
+        font-size: 14px;
+        border-radius: 10px 10px;
+        margin-bottom: 20px;
+        padding:2px 2px 0;
+}
+.post-form .wangEditor-menu-container{
+        border-radius: 10px ;
+}
+/*文本编辑器focus状态*/
+.textarea-focus{
+    border-color: #5ab8fe;
+    outline:0;
+    box-shadow: inset 0 0 2px 1px #5ab8fe,0 0 2px  #5ab8fe;
+}
+[data-dpr="2"] .textarea-focus{
+    box-shadow: inset 0 0 4px 2px #5ab8fe,0 0 4px  #5ab8fe;
+}
+[data-dpr="3"] .textarea-focus{
+    box-shadow: inset 0 0 6px 4px #5ab8fe,0 0 6px  #5ab8fe;
+}
