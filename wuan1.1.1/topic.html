@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="stylesheets/global.css">
+        <title></title>
+    </head>
+    <body>
+    <div class="container all-wrapper">
+        <div class="navbar">
+            <h1 class="navbar-title"><a href="/" title="">午安网</a></h1>
+            <ul class="navbar-option">
+                <li><a href="/" title="" class="navbar-option-item">首页</a></li>
+                <li id="nav-myP"><a href="/myPlanet" title="" class="navbar-option-item">我的星球</a></li>
+                <li id="nav-allP"><a href="/planetAll" title="" class="navbar-option-item">全部星球</a></li>
+            </ul>
+            <ul class="navbar-account">
+                <li id="nav-login"><a href="/login" title="" class="navbar-account-item">登录</a></li>
+                <li id="nav-register"><a href="/register" title="" class="navbar-account-item">注册</a></li>
+                <li class="nav-anone" id="nav-userId"><span href="" title="" class="navbar-account-item"></span></li>
+                <li class="nav-anone" id="nav-logout"><a href="" title="" class="navbar-account-item">退出</a></li>
+            </ul>
+        </div>   
+        <div class="main">
+                <div class="post-detail">
+                    <div class="post-md">
+                        <h1 class="post-title"><%=result.title%></h1>
+                        <div class="post-info clearfix">
+                            <span><a href="" title=""><%=result.nickname%></a></span>
+                            <span>发表于</span>
+                            <span><a href="/group/<%=result.groupID%>" title=""><%=result.groupName%></a></span>
+                            <span class="post-time"><%=result.createTime%></span>
+                        </div>
+                        <div class="post-content">
+                            <%-result.text%>
+                            总有一些句子或者诗词甚至电影台词，会在一瞬间打动我们的心。希望把这些美好记录下来。  那时我们有梦， 关于文学， 关于爱情， 
+                        </div>
+                        <div class="post-opt">
+                            <button class="post-opt-item">置顶</button>
+                            <a href="/postEdit/<%=result.postID%>" title="" class="post-opt-item">编辑</a>
+                            <button class="post-opt-item">删除</button>
+                        </div>
+                    </div>
+                    <div class="post-comment">
+                        <h2>3个回复</h2>
+                        <div class="post-cm-group">
+                            <div class="post-cm-item">
+                                <div class="post-cm-info clearfix">
+                                    <span><a href="" title="">紫苏</a></span>
+                                    <span class="post-cm-time">2015-11-18</span>
+                                </div>
+                                <div class="post-cm-content">我追过清风喝过烈酒爱过你</div>
+                            </div>
+                        </div>
+                        <div class="page-turn">
+                            <button>上一页</button>
+                            <span>1/234</span>
+                            <button>下一页</button>
+                        </div>
+                    </div>
+                    <div class="my-comment">
+                        <h2>我的回复</h2>
+                        <form class="post-detail-form clearfix" action="/postReply" method="post">
+                            <textarea name="" class="form-control" placeholder="内容"></textarea>
+                            <button type="submit" class="post-sub" id="myReplyBtn">发表回复</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </body>
+</html>
