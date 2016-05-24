@@ -43,6 +43,20 @@ ul{
 .clearfix:after,.row:after,.container:after,.navbar:after{
     clear:both;
 }
+.col-sm-4{
+    width:33.33333333%;
+    float:left;
+}
+.col-sm-3{
+    width:25%;
+    float:left;
+}
+/*文本单行超出省略号表示*/
+.text-ellipsis{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .all-wrapper{
     position: relative;
     height:100%;
@@ -253,11 +267,7 @@ button.unCBtn{
 *********全部星球********
 ************************/
 /*星球单条选项*/
-.text-ellipsis{
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
 .planet{
     margin:48px 0 86px;
 }
@@ -265,10 +275,7 @@ button.unCBtn{
     margin-right: -20px;
     margin-left: -20px;
 }
-.col-sm-4{
-    width:33.33333333%;
-    float:left;
-}
+
 .planet-item{
     padding:10px 20px;
 }
@@ -602,4 +609,40 @@ textarea.form-control{
     border-color: #5ab8fe;
     outline:0;
     box-shadow: inset 0 0 2px 1px #5ab8fe,0 0 2px  #5ab8fe;
+}
+/***********************
+********我的星球星球标签**
+***************************/
+.myPGroup{
+
+}
+.myPGroup h2{
+    font-size: 18px;
+    line-height: 40px;
+    color:#5ab8fe;
+}
+.myPGroup h2 a{
+    display:inline-block;
+    width:15px;
+    height:40px;
+    background: url(../images/moreP_03.png) no-repeat;
+    background-size: 100% 100%;
+    float:right;
+    vertical-align: top;
+}
+.planetTags{
+    margin-right: -25px;
+    margin-left: -25px;
+}
+.planetTag{
+    padding:4px 25px;
+}
+.planetTag a{
+    display:block;
+    font-size: 14px;
+    color:#ffffff;
+    background-color: #5ab8fe;
+    border-radius: 4px;
+    text-align: center;
+    padding:4.5px 0;
 }
