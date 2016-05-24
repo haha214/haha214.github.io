@@ -24,7 +24,7 @@
         <div class="main main-page">
             <div class="location clearfix">
                 <h1><a href="/" title="">全部星球</a></h1>
-                <a href="#?" title="" id="cpBtn">创建星球</a>
+                <button type="button" id="cpBtn">创建星球</button>
             </div>  
             <div class="planet"> 
                 <ul class="clearfix">
@@ -93,14 +93,15 @@
                     </li>
                 </ul>
             </div>
+            
+            <div class="page-turn">
+                <button type="button" class="">上一页</button>
+                <span><%=result.currentPage%>/<%=result.pageCount%></span>
+                <button type="button">下一页</button>
+            </div>
             <!-- <div class="emptyPage">
                 目前还没有星球哦~~
             </div> -->
-            <div class="page-turn">
-                <span><a href="#?" title="">上一页</a></span>
-                <span><%=result.currentPage%>/<%=result.pageCount%></span>
-                <span><a href="#?" title="">下一页</a></span>
-            </div>
         </div>
     </div>
     </body>
