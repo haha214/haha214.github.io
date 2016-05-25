@@ -271,7 +271,7 @@ button.unCBtn{
 .planet{
     margin:48px 0 86px;
 }
-.planet>ul{
+.planetList{
     margin-right: -20px;
     margin-left: -20px;
 }
@@ -388,6 +388,11 @@ button.unCBtn{
     color:#5ab8fe;
     font-size: 32px;
     cursor:pointer;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.upPIcon input[type="file"]{
+    display:none;
 }
 /*星球说明*/
 .cp-des{
@@ -645,4 +650,17 @@ textarea.form-control{
     border-radius: 4px;
     text-align: center;
     padding:4.5px 0;
+}
+/*********************
+********我加入的星球*****
+***********************/
+.myJoinMd{
+    margin-top: 30px;
+}
+.myJoinList {
+    margin-bottom: 20px;
+}
+.myJoinList h2{
+    font-size: 20px;
+    color:#5ab8fe;
 }
