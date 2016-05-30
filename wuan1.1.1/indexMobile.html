@@ -35,48 +35,55 @@
                 <li class="nav-anone" id="nav-logout"><a href="" title="" class="navbar-icon navbar-account-item">退出</a></li>
             </ul>
         </div>
-        <div class="main">
+        <div class="main main-page">
             <div class="location clearfix">
                 <h1><a href="/" title="">首页</a></h1>
-                <button type="button" id="joinBtn">+加入</button>
             </div> 
             <div class="chapter-col">
                 <div class="chapter">
                     <h2 class="text-ellipsis"><a href="/topic/<%=item.postID%>" title=""><%=item.title%></a></h2>
-                    <div class="chapter-text"><%-item.text%></div>
                     <div class="chapter-info">
                         <span><a href="#?" title=""><%=item.nickname%></a></span>
-                        <span>发表于</span>
+                        <span class="cha-icon"></span>
                         <span><a href="/group/<%=item.groupID%>" title=""><%=item.groupName%></a></span>
                         <span class="cha-time"><%=item.createTime%></span>
                     </div>
+                    <div class="chapter-text"><%-item.text%></div>
                 </div>
                 <div class="chapter">
                     <h2 class="text-ellipsis"><a href="/topic/<%=item.postID%>" title=""><%=item.title%></a></h2>
-                    <div class="chapter-text"><%-item.text%></div>
                     <div class="chapter-info">
                         <span><a href="#?" title=""><%=item.nickname%></a></span>
-                        <span>发表于</span>
+                        <span class="cha-icon"></span>
                         <span><a href="/group/<%=item.groupID%>" title=""><%=item.groupName%></a></span>
                         <span class="cha-time"><%=item.createTime%></span>
                     </div>
+                    <div class="chapter-text"><%-item.text%></div> 
                 </div>
                 <div class="chapter">
                     <h2 class="text-ellipsis"><a href="/topic/<%=item.postID%>" title="">卧槽！谁来告诉我我这是眼袋还是卧蚕！我才知道我笑起来那么吓人！</a></h2>
+                    <div class="chapter-info">
+                        <span><a href="#?" title="">陶陶</a></span>
+                        <span class="cha-icon"></span>
+                        <span><a href="/group/<%=item.groupID%>" title="">鬼扯天地</a></span>
+                        <span class="cha-time">2015-04-28 13:31</span>
+                    </div>
                     <div class="chapter-text">昨天拍了个照片也没太注意。。发给朋友看他们说你最近眼袋怎么那么重！ 然而露珠平时好像是没有眼袋的啊！ 百度了一下说卧蚕什么紧贴下睫毛啊细细一条啊但是露珠的好像并不细。。。哭 大...</div>
                     <div class="chapter-img">
                         <img src="images/chapter_03.png" alt="">
                         <img src="images/chapter_03.png" alt="">
                         <img src="images/chapter_03.png" alt="">
                    </div>
-                    <div class="chapter-info">
-                        <span><a href="#?" title="">陶陶</a></span>
-                        <span>发表于</span>
-                        <span><a href="/group/<%=item.groupID%>" title="">鬼扯天地</a></span>
-                        <span class="cha-time">2015-04-28 13:31</span>
-                    </div>
                 </div>
             </div>
+            <div class="page-turn">
+                <button class="unCBtn">上一页</button>
+                <span>1/255</span>
+                <button>下一页</button>
+            </div> 
+<!--             <div class="emptyPage">
+                目前还没有星球哦~~
+            </div> -->
         </div>
     </div>
     </body>

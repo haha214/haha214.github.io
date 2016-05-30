@@ -235,7 +235,7 @@ span.navbar-account-item{
 **********主栏*****
 ***************************/
 .main{
-    padding: 1.133333rem 0.462963rem 0;
+    padding: 1.133333rem 0.466667rem 0;
     position: relative;
     left:0;
     background-color: inherit;
@@ -245,7 +245,7 @@ span.navbar-account-item{
     min-height: 100%;
 }
 .main-page{
-    padding-bottom: 1.435185rem;
+    padding-bottom: 1.866667rem;
     position: relative;
 }
 /*折叠状态*/
@@ -282,20 +282,6 @@ span.navbar-account-item{
     100%  {left:5.555556rem;}
 }
 
-@media (min-width:768px){
-    .main{
-        width:750px;
-        margin:0 auto;
-        padding: 0;
-        left:0 !important;
-    }
-    .main-page{
-        padding-bottom: 70px;
-    }
-    .main-mask{
-        display:none!important;
-    }
-}
 /********************
 *********当前位置***
 *******************/
@@ -314,7 +300,7 @@ span.navbar-account-item{
     display:inline-block;
     color:#f6fafb;
     font-size: 0.333333rem;
-    width:1.2rem;
+    padding:0 0.2rem;
     height:0.64rem;
     line-height: 0.64rem;
     background-color: #5ab8fe;
@@ -331,57 +317,47 @@ span.navbar-account-item{
 ********翻页模块***
 *******************/
 .page-turn{
-    font-size: 0.462963rem;
+    font-size: 0.453333rem;
+    line-height: 1;
     color:#949494;
     text-align: center;
-    padding:0.138889rem 0 0.601852rem;
-    height:1.435185rem;
 }
 .page-turn>span{
-    margin:0 0.324074rem;
+    margin:0 0.4rem;
 }
-.page-turn a{
+.page-turn button{
+    font-size: 0.453333rem;
+    line-height: 1;
     color:#5ab8fe;
+    margin:0 0.4rem;
+    padding:0;
+    background-color: inherit;
+    cursor:pointer;
+}
+/*不可点击的翻页*/
+button.unCBtn{
+    color:#bababa;
+    cursor:default;
 }
 .main-page>.page-turn{
     position: absolute;
     bottom:0;
     width:100%;
     left:0;
+    padding:0.48rem 0 0.933333rem;
 }
-@media (min-width:768px){
-    .page-turn{
-        font-size: 16px;
-        padding:23px 0;
-    }
-    .page-turn>span{
-        margin:0 20px;
-    }
-    .no-pape .page-turn{
-        display:none;
-    }
-}
-@media (min-width:768px){
-    .col-sm-4{
-        width:33.33333333%;
-        float:left;
-    }
-}
+
 /***************
 *******空白页****
 *****************/
 .emptyPage{
     color:#cccccc;
-    font-size: 0.333333rem;
+    font-size: 0.48rem;
     text-align: center;
-    padding:3.703704rem 0;
-    margin:0;
-}
-@media (min-width:768px){
-    .emptyPage{
-        font-size: 20px;
-        padding:160px 0 300px;
-    } 
+    position: absolute;
+    width:100%;
+    top:50%;
+    left:0;
 }
 /****************
 *********文章*****
@@ -413,7 +389,7 @@ span.navbar-account-item{
 }
 /*列表图片*/
 .chapter-img{
-    margin-bottom: 0.37037rem;
+    margin-bottom: 0.44rem;
     display:flex;
     justify-content: space-between;
 }
@@ -424,10 +400,21 @@ span.navbar-account-item{
 /*列表信息*/
 .chapter-info{
     font-size: 0.333333rem;
+    line-height: 0.44rem;
     color:#a7a7a7;
+    margin-bottom: 0.333333rem;
 }
 .chapter-info a{
     color:#a7a7a7;
+}
+.cha-icon{
+    display:inline-block;
+    vertical-align: bottom;
+    margin-left: 0.4rem;
+    width:0.44rem;
+    height:0.44rem;
+    background:url(../images/cp_03.png) no-repeat;
+    background-size: 100% 100%;
 }
 .cha-time{
     float:right;
@@ -504,66 +491,38 @@ span.navbar-account-item{
 *********全部星球********
 ************************/
 /*星球单条选项*/
-.text-ellipsis{
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 .planet{
-    margin-bottom: 0.953704rem;
+    padding:0.4rem 0.506667rem 0.8rem;
 }
 .planet-item{
-    padding:0.231481rem 0 0.231481rem 0.555556rem;
+    margin-bottom: 0.426667rem;
 }
 .planet-pic{
-    margin-right: 0.62037rem;
+    margin-right: 0.64rem;
     float:left;
 }
 .planet-pic img{
-    width:1.481481rem;
-    height:1.481481rem;
+    width:1.466667rem;
+    height:1.466667rem;
 }
 .planet-info{
     color:#bbbbbb;
-    font-size: 0.37037rem;
-}
-.planet-info:before{
-    content:"";
-    display:table;
+    font-size: 0.32rem;
 }
 .planet-info h2{
-    font-size: 0.462963rem;
-    margin-top: 0.074074rem;
+    font-size: 0.453333rem;
+    line-height: 0.466667rem;
+    margin-bottom: 0.04rem;
+    color:#5ab8fe;  
 }
 .planet-info a{
     color:#5ab8fe;    
 }
-@media (min-width:768px){
-    
-    .planet>ul{
-        margin-right: -20px;
-        margin-left: -20px;
-    }
-    .planet-item{
-        padding:10px 20px;
-    }
-    .planet-pic{
-        margin-right: 18px;
-    }
-    .planet-pic img{
-        width:60px;
-        height:60px;
-    }
-    .planet-info{
-        font-size: 16px;
-    }
-    .planet-info h2{
-        font-size: 20px;
-        margin-top: 3.5px;
-    }
-    .planet{
-        margin:48px 0 86px;
-    }
+.planet-info p{
+    font-size: 0.32rem;
+    height:0.96rem;
+    line-height: 0.48rem;
+    overflow:hidden;
 }
 /************************
 登陆注册及创建星球底线表单
