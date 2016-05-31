@@ -107,15 +107,24 @@ ul{
 /****************************
 ******移动端侧栏*
 ****************************/
-.sidebar{
+.sidebarContainer{
+    height:100%;
+    width:100%;
     position: fixed;
     top:0;
     left:0;
+    overflow-y: auto; 
+    background-color: #53aaeb; 
+}
+.sidebar{
     width:5.546667rem;
     background-color: #53aaeb;
     color:#fff;
     min-height: 100%;
     text-align: center;
+    overflow-y: auto;
+    position: relative;
+   /* z-index: 1;*/
 }
 .sidebar>h1{
     font-size: 0.64rem;
