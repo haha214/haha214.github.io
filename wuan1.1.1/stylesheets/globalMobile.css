@@ -124,6 +124,7 @@ ul{
     text-align: center;
     overflow-y: auto;
     position: relative;
+    padding-bottom: 1.333333rem;
    /* z-index: 1;*/
 }
 .sidebar>h1{
