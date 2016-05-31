@@ -260,12 +260,12 @@ span.navbar-account-item{
 ***************/
 /*侧栏出现时main上层遮罩*/
 .sidebar-extend .mask{
+    position: absolute;
     top:0;
     bottom:0;
     left:0;
     right:0;
     z-index: 1;
-    position: absolute;
 }
 .sidebar-extend .main,.sidebar-extend .navbar{
      left:5.546667rem; 

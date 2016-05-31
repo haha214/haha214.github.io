@@ -97,8 +97,9 @@
             $(".all-wrapper").toggleClass('sidebar-extend');
             if ($(".all-wrapper").hasClass('sidebar-extend')) {
                 $(".mask").on("touchend", function(e) {
-                    e.stopPropagation();
+                    //e.stopPropagation();
                     $(".all-wrapper").removeClass('sidebar-extend');
+                    return false;//zepto return false 则会阻止事件冒泡以及默认操作
                 });
             }
         });
