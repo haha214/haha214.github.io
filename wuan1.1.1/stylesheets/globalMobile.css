@@ -392,18 +392,24 @@ button.unCBtn{
 /*列表图片*/
 .chapter-img{
     margin-bottom: 0.44rem;
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    position:relative;
 }
 .chapter-img img{
     width:2.133333rem;
     height:2.133333rem;
+}
+.chapter-img img:first-child{
+    float:left;
+}
+.chapter-img img:nth-child(2){
+    position: absolute;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);        
+    top:0;
+}
+.chapter-img img:nth-child(3){
+    float:right;
 }
 /*列表信息*/
 .chapter-info{
