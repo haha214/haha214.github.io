@@ -36,6 +36,7 @@
             </ul>
         </div>
         <div class="main main-page">
+            <div class="mask"></div>
             <div class="location clearfix">
                 <h1><a href="/" title="">首页</a></h1>
             </div> 
@@ -86,5 +87,17 @@
             </div> -->
         </div>
     </div>
+    <script type="text/javascript" src="javascripts/zepto.min.js"></script>
+    <script type="text/javascript" src="javascripts/zepto.touch.js"></script>
+    <script type="text/javascript">
+        $(".navbar-toggle").on("touchend", function() {
+            $(".all-wrapper").toggleClass('sidebar-extend');
+            if ($(".all-wrapper").hasClass('sidebar-extend')) {
+                $(".mask").on("touchend", function() {
+                    $(".all-wrapper").removeClass('sidebar-extend');
+                });
+            }
+        });
+    </script>
     </body>
 </html>

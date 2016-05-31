@@ -402,7 +402,7 @@ button.unCBtn{
     margin-bottom: 15px;
 }
 .cp-des textarea{
-    height:160px;
+    height:255px;
 }
 /*******************
 ******登陆和注册***********
@@ -416,7 +416,6 @@ button.unCBtn{
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);    
     margin: 0 auto ;
-
 }
 .login-group{
     margin-bottom: 20px;

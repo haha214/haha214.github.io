@@ -228,8 +228,6 @@ span.navbar-account-item{
 .nav-ahidden{
     visibility: hidden;
 }
-/*折叠状态*/
-
 
 /*************************
 **********主栏*****
@@ -248,12 +246,11 @@ span.navbar-account-item{
     padding-bottom: 1.866667rem;
     position: relative;
 }
-/*折叠状态*/
-.sidebar-extend .main{
-    left:5.555556rem; 
-}
+/**************
+*****折叠状态****
+***************/
 /*侧栏出现时main上层遮罩*/
-.sidebar-extend .main-mask{
+.sidebar-extend .mask{
     top:0;
     bottom:0;
     left:0;
@@ -261,7 +258,8 @@ span.navbar-account-item{
     z-index: 1;
     position: absolute;
 }
-.sidebar-extend .main,.sidebar-extend .navbar-header{
+.sidebar-extend .main,.sidebar-extend .navbar{
+     left:5.546667rem; 
     -webkit-animation: open .35s ease-in-out;
     -moz-animation: open .35s ease-in-out;
     animation: open .35s ease-in-out;
@@ -269,17 +267,17 @@ span.navbar-account-item{
 @-webkit-keyframes open {
     0%      {left:0;}
     70%    {left:6.5rem;}
-    100%  {left:5.555556rem;}
+    100%  {left:5.546667rem;}
 }
 @-moz-keyframes open {
     0%      {left:0;}
     70%    {left:7rem;}
-    100%  {left:5.555556rem;}
+    100%  {left:5.546667rem;}
 }
 @keyframes open {
     0%      {left:0;}
     70%    {left:6.5rem;}
-    100%  {left:5.555556rem;}
+    100%  {left:5.546667rem;}
 }
 
 /********************
@@ -421,72 +419,7 @@ button.unCBtn{
     margin-right: 0.092593rem;
 }
 
-/********************
-****创建星球**********
-**********************/
-.create-p{
-    padding:1.712963rem 0 6.666667rem;
-}
-.create-p>h2{
-    font-size:0.555556rem;
-    margin-bottom: 2.685185rem;
-    color:#5ab8fe;
-}
-.cp-form{
-    width:7.037037rem;
-    margin:0 auto;
-}
-.cp-group{
-    padding-bottom: 0.12963rem;
-    margin-bottom: 2.5rem;
-}
-.cp-label{
-    width:0.611111rem;
-    height:0.611111rem;
-    background:url(../images/cp_03.png); 
-}
-.cp-input{
-    font-size: 0.37037rem;
-    line-height: 0.611111rem;
-    height:0.611111rem;
-    padding-left: 0.814815rem;
-}
-.cp-sub{
-    font-size: 0.462963rem;
-    line-height: 1.5;
-    padding:0.12037rem 0;
-}
-@media (min-width:768px){
-    .create-p{
-        padding:20px 0 330px;
-    }
-    .cp-form{
-        width:290px;
-    }
-    .create-p>h2{
-        font-size: 30px;
-        margin-bottom: 200px;
-    }
-    .cp-group{
-        padding-bottom: 4px;
-        margin-bottom: 57px;
-    }
-    .cp-label{
-        width:36px;
-        height:36px;
-    }
-    .cp-input{
-        font-size: 17px;
-        line-height: 36px;
-        padding-left: 50px;
-        height:36px;
-    }
-    .cp-sub{
-        font-size: 21px;
-        padding:5px 0;
-        border-radius: 8px 7px;
-    }
-}
+
 /*************************
 *********全部星球********
 ************************/
@@ -544,7 +477,6 @@ button.unCBtn{
     position: absolute;
     top:0;
     left:0;
-    bottom:0;
     cursor:pointer;
 }
 .line-form input{
@@ -566,20 +498,73 @@ button.unCBtn{
 [data-dpr="3"] .line-form button[type="submit"]{
     border-radius: 15px;
 }
+/********************
+****创建星球**********
+**********************/
+.create-p{
+    padding:0.866667rem 0 2.0rem;
+}
+/*星球说明等标题*/
+.create-p h4{
+    font-size: 0.373333rem;
+    line-height: 1;
+    color:#b4b4b4;
+    font-weight: normal;
+}
+.cp-form{
+    width:8.533333rem;
+    margin:0 auto;
+}
+/*输入星球名字*/
+.cp-group{
+    padding-bottom: 0.08rem;
+    margin-bottom: 0.933333rem;
+}
+.cp-group label{
+    width:0.64rem;
+    height:0.64rem;
+    background-image:url(../images/cp_03.png); 
+}
+.cp-group input{
+    font-size: 0.373333rem;
+    line-height: 0.64rem;
+    height:0.64rem;
+    padding-left: 0.933333rem;
+}
+/*创建星球按钮*/
+.cp-form button[type="submit"]{
+    font-size: 0.466667rem;
+    line-height: 1.5;
+    padding:0.24rem 0;
+}
+/*星球说明*/
+.cp-des{
+    margin-bottom: 1.333333rem;
+}
+.cp-des h4{
+    margin-bottom: 0.426667rem;
+}
+.cp-des textarea{
+    height:3.4rem;
+}
 /*******************
 ******登陆和注册***********
 ******************/
 .login{
+    position: absolute;
+    top:50%;
+    left:0;
+    right:0;
     width:7.066667rem;
     margin: 0 auto ;
-    padding:3.055556rem 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);  
 }
 .login-group{
     padding-bottom: 0.2rem;
-    margin-bottom: 0.466667rem;
+    margin-bottom:0.426667rem;
 }
-
-.login-label{
+.login-group label{
     width:0.64rem;
     height:0.64rem;
 }
@@ -592,263 +577,32 @@ button.unCBtn{
 .label-paw{
     background-image: url(../images/login_06.png);
 }
-
-.login-input{
+.login-group input{
     font-size: 0.373333rem;
     line-height: 0.64rem;
     height:0.64rem;
-    padding-left: 1.12rem;   
+    padding-left: 1.133333rem;   
 }
 
-.login-sub{  
-    font-size: 0.466667rem;
+.login-form button[type="submit"]{  
+    font-size: 0.453333rem;
     line-height: 1.2;
-    padding:0.186667rem 0 ;
-    margin-top: 0.773333rem;
+    padding:0.266667rem 0 ;
+    margin-top:0.853333rem;
 }
-
-@media (min-width:768px){
-    .login{
-        width:325px;
-        padding:200px 0;
-    }
-    .login-group{
-        margin-bottom: 20px;
-        padding-bottom: 5px;
-    }
-    .login-label{
-        width:36px;
-        height:36px;
-    }
-    .login-input{
-        font-size: 17px;
-        line-height: 36px;
-        height:36px;
-        padding-left: 51px;
-    }
-    .login-sub{
-        font-size: 21px;
-        padding:8.5px 0;
-        border-radius: 7px;
-        margin-top: 35px;
-    }
+.login-form a{
+    font-size: 0.32rem;
+    color:#5ab8fe;
 }
 /*******************
-帖子详情
+****各种帖子中的表单***
 *******************/
-.post-detail{
-    padding:0.25rem 0 0.833333rem;
-}
-/*帖子内容模块*/
-.post-md{
-    margin-bottom: 0.296296rem;
-}
-.post-title{
-    font-size: 0.555556rem;
-    color: #363636;
-    margin-bottom: 0.185185rem;
-}
-.post-info{
-    font-size: 0.333333rem;
-    color:#a7a7a7;
-    margin-bottom: 0.37037rem;
-}
-.post-info a{
-    color:#a7a7a7;
-}
-.post-time{
-    float: right;
-}
-.post-content{
-    word-wrap: break-word;
-    /*white-space: pre-wrap;*/
-    font-size: 0.37037rem;
-    color:#5c5c5c;
-    /*padding: 0 0.277778rem 0.898148rem;*/
-    margin-bottom: 0.898148rem;
-}
-.post-opt{
-    font-size: 0.425926rem;
-    margin-right: -0.166667rem;
-    margin-left: -0.166667rem;
-    text-align: right;
-}
-.post-opt-item{
-    color:#5ab8fe;
-    display: inline-block;
-    padding:0 0.166667rem;
-}
-/*帖子回复*/
-.post-comment{
-    margin-bottom: 0.462963rem;
-}
-.post-comment>h2{
-    color:#a7a7a7;
-    font-size: 0.462963rem;
-    line-height: 1.2;
-    margin-bottom: 0.203704rem;
-}
-/*单条回复*/
-.post-cm-item{
-    padding:0.333333rem 0 0.222222rem;
-    border-bottom: 1px solid #e8e8e8;
-}
-[data-dpr="2"] .post-cm-item{
-    border-bottom-width: 2px;
-}
-[data-dpr="3"] .post-cm-item{
-    border-bottom-width: 3px;
-}
-/*回复信息*/
-.post-cm-info{
-    font-size: 0.37037rem;
-    color:#363636;
-    margin-bottom: 0.046296rem;
-}
-.post-cm-info a{
-    color:#363636;
-}
-.post-cm-time{
-    float:right;
-}
-/*回复内容*/
-.post-cm-content{
-    font-size: 0.37037rem;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    color:#5b5b5b;
-}
-/*回复内容的翻页*/
-.post-comment .page-turn{
-    padding:0.37037rem 0 0;
-    text-align: right;
-    font-size: 0.425926rem;
-}
-/*我的回复*/
-.my-comment{
-    
-}
-.my-comment>h2{
-    color:#5ab8fe;
-    font-size: 0.555556rem;
-    margin-bottom: 0.231481rem;
-}
-/*表单*/
-.post-detail-form textarea{
-    margin-bottom: 1.157407rem;
-    height:3.472222rem;
-}
-
-@media (min-width:768px){
-    .post-detail{
-        padding:22px 0 93px;
-    }
-    /*帖子内容模块*/
-    .post-md{
-        margin-bottom: 68px;
-    }
-    .post-title{
-        font-size:24px;
-        margin-bottom: 0;
-    }
-    .post-info{
-        font-size: 12px;
-        margin-bottom: 9px;
-    }
-    .post-content{
-        font-size: 14px;
-        margin-bottom: 23px;
-    }
-    .post-opt{
-        font-size: 18px;
-        margin-right: -5px;
-        margin-left: -5px;
-    }
-    .post-opt-item{
-        padding:0 5px;
-    }
-    /*帖子回复*/
-    .post-comment{
-        margin-bottom: 20px;
-    }
-    .post-comment>h2{
-        font-size: 18px;
-        margin-bottom: 0;
-    }
-    .post-cm-item{
-        padding:13px 0 4px;
-    }
-    .post-cm-info{
-        font-size: 12px;
-        margin-bottom: 5px;
-    }
-    .post-cm-content{
-        font-size: 12px;
-    }
-    /*帖子回复翻页*/
-    .post-comment .page-turn{
-        padding:10px 0 0;
-        font-size: 16px;
-    }
-    /*我的回复*/
-    .my-comment{
-    
-    }
-    .my-comment>h2{
-        font-size: 18px;
-        margin-bottom: 14px;
-    }
-    /*表单*/
-    .post-detail-form textarea{
-        margin-bottom: 20px;
-        height:161px;
-    }
-}
-/******************
-创建及编辑帖子
-******************/
-.post>h2{
-    font-size: 0.555556rem;
-    color:#5ab8fe;
-    margin-bottom:1.296296rem;
-}
-
-.post-form input{
-    margin-bottom: 0.509259rem;
-}
-.post-form textarea{
-    height:6.712963rem;
-    margin-bottom: 1.574074rem;
-}
-.post{
-    padding:1.685185rem 0 1.666667rem;
-}
-
-@media (min-width:768px){
-    .post>h2{
-        font-size: 30px;
-        margin-bottom: 70px;
-    }
-    
-    .post-form input{
-        margin-bottom: 30px;
-    }
-    .post-form textarea{
-        height:360px;
-        margin-bottom:20px ;
-    }
-    .post{
-        padding:0;
-        margin:21px 0 93px;
-    }
-}
-/*帖子表单*/
 .form-control{
     display:block;
     width:100%;
-    font-size:0.37037rem ;
+    font-size:0.373333rem;
     line-height: 1.5;
-    padding:0.148148rem 0.277778rem;
+    padding:0.293333rem;
     color:#b4b4b4;
     background-color: #f6fafb;
     border:1px solid #ccc;
@@ -878,9 +632,9 @@ button.unCBtn{
     background-color: #5ab8fe;
     color:#f6fafb;
     border-radius: 9px 8px;
-    font-size: 0.462963rem;
+    font-size: 0.453333rem;
     line-height: 1.5;
-    padding:0.138889rem 0;
+    padding:0.266667rem 0;
     cursor:pointer;
 }
 [data-dpr="2"] .post-sub{
@@ -895,58 +649,186 @@ textarea.form-control{
     white-space: pre-wrap;
 }
 
-@media (min-width:768px){
-    .form-control{
-        font-size: 14px;
-        line-height: 1.5;
-        padding:7px 10px;
-        border-radius: 10px ;
-    }
-    .post-sub{
-        width:auto;
-        border-radius: 4px;
-        font-size: 17px;
-        line-height: 1.5;
-        padding:5px 25px;
-        float:right;
-    }
-
+/*******************
+帖子详情
+*******************/
+.post-detail{
+    padding:0.4rem 0 0.933333rem;
 }
-/*移动文本编辑器*/
-.post-form .wangEditor-mobile-container{
-    height:6.712963rem;
-    border:1px solid #ccc;
-    border-radius: 8px 7px;
-    margin-bottom: 1.574074rem;
-    font-size: 0.37037rem;
+/*帖子内容模块*/
+.post-md{
+    margin-bottom: 0.533333rem;
 }
-[data-dpr="2"] .post-form .wangEditor-mobile-container{
-    border-width: 2px;
-    border-radius: 16px 14px;
+.post-title{
+    font-size: 0.56rem;
+    color: #363636;
+    margin-bottom: 0.36rem;
 }
-[data-dpr="3"] .post-form .wangEditor-mobile-container{
-    border-width: 3px;
-    border-radius: 24px 21px;
+.post-info{
+    font-size: 0.32rem;
+    color:#a7a7a7;
+    margin-bottom: 0.373333rem;
 }
-/*PC文本编辑器*/
-.post-form .wangEditor-container{
-        font-size: 14px;
-        border-radius: 10px 10px;
-        margin-bottom: 20px;
-        padding:2px 2px 0;
+.post-info a{
+    color:#a7a7a7;
 }
-.post-form .wangEditor-menu-container{
-        border-radius: 10px ;
+.post-time{
+    float: right;
 }
-/*文本编辑器focus状态*/
-.textarea-focus{
-    border-color: #5ab8fe;
-    outline:0;
-    box-shadow: inset 0 0 2px 1px #5ab8fe,0 0 2px  #5ab8fe;
+.post-content{
+    word-wrap: break-word;
+    font-size: 0.373333rem;
+    color:#5c5c5c;
+    margin-bottom: 0.866667rem;
 }
-[data-dpr="2"] .textarea-focus{
-    box-shadow: inset 0 0 4px 2px #5ab8fe,0 0 4px  #5ab8fe;
+.post-opt{
+    margin-right: -0.186667rem;
+    margin-left: -0.186667rem;
+    text-align: right;
 }
-[data-dpr="3"] .textarea-focus{
-    box-shadow: inset 0 0 6px 4px #5ab8fe,0 0 6px  #5ab8fe;
+.post-opt-item{
+    font-size: 0.426667rem;
+    color:#5ab8fe;
+    display: inline-block;
+    padding:0 0.186667rem;
+    background-color: inherit;
+    cursor:pointer;
+}
+/*帖子回复*/
+.post-comment{
+    margin-bottom: 0.72rem;
+}
+.post-comment>h2{
+    color:#a7a7a7;
+    font-size: 0.453333rem;
+    line-height: 1.2;
+    margin-bottom: 0.746667rem;
+}
+/*单条回复*/
+.post-cm-item{
+    padding:0.373333rem 0 0.266667rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+[data-dpr="2"] .post-cm-item{
+    border-bottom-width: 2px;
+}
+[data-dpr="3"] .post-cm-item{
+    border-bottom-width: 3px;
+}
+/*回复信息*/
+.post-cm-info{
+    font-size: 0.373333rem;
+    color:#363636;
+    margin-bottom: 0.146667rem;
+}
+.post-cm-info a{
+    color:#363636;
+}
+.post-cm-time{
+    float:right;
+}
+/*回复内容*/
+.post-cm-content{
+    font-size: 0.373333rem;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color:#5b5b5b;
+}
+/*回复内容的翻页*/
+.post-comment .page-turn{
+    padding:0.533333rem 0 0;
+    text-align: right;
+    font-size: 0;
+}
+.post-comment .page-turn span,.post-comment .page-turn button{
+    margin:0 0.386667rem;
+    font-size: 0.4rem;
+}
+/*我的回复*/
+.my-comment>h2{
+    color:#5ab8fe;
+    font-size: 0.56rem;
+    margin-bottom: 0.4rem;
+}
+/*表单*/
+.post-detail-form textarea{
+    margin-bottom: 1.2rem;
+    height:3.466667rem;
+}
+/******************
+创建及编辑帖子
+******************/
+.post-form input{
+    margin-bottom: 0.48rem;
+}
+.post-form textarea{
+    height:6.666667rem;
+    margin-bottom: 1.173333rem;
+}
+.post{
+    margin:1.333333rem 0 2.666667rem;
+}
+/***********************
+********我的星球星球标签**
+***************************/
+.myPGroups{
+    padding-bottom: 0.053333rem;
+    border-bottom:1px solid #e6e6e6;
+}
+[data-dpr="2"] .myPGroups{
+    border-bottom-width: 2px;
+}
+[data-dpr="3"] .myPGroups{
+    border-bottom-width: 3px;
+}
+.myPGroup h2{
+    font-size: 0.4rem;
+    line-height: 0.666667rem;
+    height:0.666667rem;
+    color:#5ab8fe;
+    margin-bottom: 0.306667rem;
+}
+.myPGroup h2 a{
+    display:inline-block;
+    width:0.666667rem;
+    height:0.666667rem;
+    background: url(../images/morePm_03.png) no-repeat;
+    background-size: 100% 100%;
+    float:right;
+    vertical-align: top;
+}
+.planetTags{
+    padding-bottom: 0.106667rem;
+}
+.planetTag{
+    margin-bottom: 0.24rem;
+    width:47%;
+}
+.planetTag:nth-of-type(2n+1){
+    float:left;
+}
+.planetTag:nth-of-type(2n){
+    float:right;
+}
+.planetTag a{
+    display:block;
+    font-size: 0.426667rem;
+    line-height: 0.533333rem;
+    color:#ffffff;
+    background-color: #5ab8fe;
+    border-radius: 4px;
+    text-align: center;
+    padding:0.266667rem 0; 
+}
+[data-dpr="2"] .planetTag a{
+    border-radius: 8px;
+}
+[data-dpr="3"] .planetTag a{
+    border-radius: 12px;
+}
+/***********************
+********我加入的星球页面***
+************************/
+.myJoinMd{
+    padding-bottom: 0.426667rem;
 }
