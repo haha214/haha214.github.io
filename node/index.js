@@ -1,18 +1,11 @@
-/* 
-* @Author: anchen
-* @Date:   2016-05-17 16:05:26
-* @Last Modified by:   anchen
-* @Last Modified time: 2016-05-18 10:04:17
-*/
+var server = require("./server");
+var router = require("./router");
+var requestHandlers = require("./requestHandlers");
 
-'use strict';
-var server = require("./server.js");
-var router = require("./router.js");
-var requestHandlers = require("./requestHandlers.js");
-
-var handle = {};
+var handle = {}
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
 handle["/upload"] = requestHandlers.upload;
+handle["/show"] = requestHandlers.show;
 
-server.start(router.route,handle);
+server.start(router.route, handle);
